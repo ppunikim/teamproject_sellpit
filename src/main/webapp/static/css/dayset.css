@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    /* flex : 부모입장에서 자식을 한 방에 나란히 수평정렬*/
+    display: flex;
+    /* 아이템이 배치되는 축의 방향을 결정하는 속성 (column 세로방향으로 배치 ) */
+    flex-direction: column;
+    /* 아이템 중앙에 배열 */
+    align-items: center;
+    /* 아이템 간격 균일하게 배치 */
+    justify-content: space-around;
+    /* 요소를 일반적인 문서 흐름에 따라 배치 */
+    position: relative;
+    /* height 속성의 사용값이 자신의 값보다 작아지는걸 방지 */
+    min-height: 100vh;
+    width: 100%;
+    /* rem은 최상위 엘리먼트인 body의 폰트 크기를 기준으로 값이 적용된다 default값 16px*/
+    padding: 0rem 2rem;
+    /* background-image: url(../image/bg.jpg); */
+    /* 배경화면 화면에 맞춰 꽉차게 */
+    background-size: cover;
+  }
+  select {
+    width: 35vh;
+    height: 30px;
+    font-size: 2vh;
+    margin-top: 30px;
+    background-image: url(../image/bg.jpg);
+    color: black;
+  }
+  h2 {
+    color: rgb(24, 23, 23);
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+  }
+  footer {
+    margin-right: 300px;
+  }
+  #tab {
+    border-radius: 16px;
+  }
+  table {
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    font-size: 80%;
+    text-align: left;
+    table-layout: fixed;
+  }
+  
+  th,
+  td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(14, 13, 13, 0.2);
+  }
+  
+  td {
+    color: white;
+  }
+  
+  th {
+    text-align: left;
+  }
+  
+  th {
+  }
+  
+  footer {
+    color: white;
+    width: 50%;
+    max-width: 100%;
+    margin: 2rem auto;
+    text-align: center;
+  }
+  footer.team {
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+    opacity: 0.75;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    color: black;
+    font-weight: bold;
+    border-color: rgb(10, 10, 10);
+  }
+  #list {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: left;
+  }
+  
