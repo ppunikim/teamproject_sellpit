@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+    -webkit-text-size-adjust: none;
+
+}
+
+body,
+input,
+select,
+textarea {
+    color: black;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+
+#wrap {
+    /* flex : 부모입장에서 자식을 한 방에 나란히 수평정렬*/
+    display: flex;
+    /* 아이템이 배치되는 축의 방향을 결정하는 속성 (column 세로방향으로 배치 ) */
+    flex-direction: column;
+    /* 아이템 중앙에 배열 */
+    align-items: center;
+    /* 아이템 간격 균일하게 배치 */
+    justify-content: space-around;
+    /* 요소를 일반적인 문서 흐름에 따라 배치 */
+    position: relative;
+    /* height 속성의 사용값이 자신의 값보다 작아지는걸 방지 */
+    min-height: 100vh;
+    width: 100%;
+    /* rem은 최상위 엘리먼트인 body의 폰트 크기를 기준으로 값이 적용된다 default값 16px*/
+    padding: 4rem 2rem;
+    z-index: 3;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+}
+
+.inner h1 {
+    border-top: 1px solid rgb(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+    font-size: 4rem;
+}
+
+
+#header .logo {
+    width: 10rem;
+    height: 10rem;
+    line-height: 5rem;
+    padding: 20px 0px 0px 0px;
+}
+
+.icon {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+
+}
+
+#header .logo .icon:before {
+    font-size: 2rem;
+}
+
+#icon_solid {
+    height: 2rem;
+
+}
+
+#icon_solid1 {
+    height: 3rem;
+
+}
+
+nav ul li {
+    border: 1px solid rgb(255, 255, 255, 0.5);
+
+}
+
+nav ul li:first-of-type {
+    border-bottom: none;
+
+}
+
+#header nav ul {
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+    border-radius: 4px;
+}
+
+
+#header nav ul li a {
+    display: block;
+    min-width: 12rem;
+    height: 2.75rem;
+    line-height: 2.75rem;
+    padding: 0 1.25rem 0 1.45rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    border-bottom: 0;
+    color: white;
+}
+
+#header nav ul li a:hover {
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+#header nav ul li a:active {
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+footer{
+    color: white;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+}
+footer .team{
+	letter-spacing: 0.2rem;
+			font-size: 0.9rem;
+			opacity: 0.75;
+			margin-bottom: 0;
+			text-transform: uppercase;
+
+}

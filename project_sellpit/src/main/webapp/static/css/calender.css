@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  ol,
+  ul {
+    list-style: none;
+  }
+  
+  body {
+    line-height: 1;
+    color: black;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+  
+  #wrap {
+    /* flex : 부모입장에서 자식을 한 방에 나란히 수평정렬*/
+    display: flex;
+    /* 아이템이 배치되는 축의 방향을 결정하는 속성 (column 세로방향으로 배치 ) */
+    flex-direction: column;
+    /* 아이템 중앙에 배열 */
+    align-items: center;
+    /* 아이템 간격 균일하게 배치 */
+    justify-content: space-around;
+    /* 요소를 일반적인 문서 흐름에 따라 배치 */
+    position: relative;
+    /* height 속성의 사용값이 자신의 값보다 작아지는걸 방지 */
+    min-height: 100vh;
+    width: 100%;
+    /* rem은 최상위 엘리먼트인 body의 폰트 크기를 기준으로 값이 적용된다 default값 16px*/
+    padding: 4rem 2rem;
+    background-image: url(../images/bg.jpg);
+    /* 배경화면 화면에 맞춰 꽉차게 */
+    background-size: cover;
+  }
+  
+  #header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+    top: 20%;
+    position: absolute;
+  }
+  
+  .inner h1 {
+    border-top: 1px solid rgb(255, 255, 255, 0.5);
+    font-size: 4rem;
+    position: absolute;
+    top: 0px;
+  }
+  .inner h2 {
+    font-size: 3rem;
+  }
+  .inner h3 {
+    font-size: 1.7rem;
+    margin-top: -10px;
+  }
+  
+  #calender input {
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    background-color: transparent;
+    padding-left: 0;
+    border-radius: 4px;
+    min-width: 12rem;
+    height: 2.75rem;
+    line-height: 2.75rem;
+    padding: 0 1.25rem 0 1.45rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  .abc-list {
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    background: rgb(196, 194, 194);
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .abc-list:not(:nth-of-type(3)) {
+    margin-right: 4px;
+  }
+  .abc-list:hover {
+    transition: all ease 0.2s 0s;
+    background-color: rgb(36, 35, 35);
+    color: white;
+  }
+  /* 모바일 화면에서 hover 역할을 하는 것. */
+  .abc-list:active {
+    transition: all ease 0.2s 0s;
+    background-color: rgb(36, 35, 35);
+    color: white;
+  }
+  
+  /* 애니메이션 효과 넣기 */
+  #a-box {
+    display: none;
+  }
+  
+  #a-box:checked ~ .a-list {
+    display: block;
+  }
+  
+  .a-list {
+    display: none;
+    margin-top: 18px;
+  }
+  
+  #b-box {
+    display: none;
+  }
+  
+  #b-box:checked ~ .b-list {
+    display: block;
+  }
+  
+  .b-list {
+    display: none;
+    margin-top: 18px;
+  }
+  
+  #c-box {
+    display: none;
+  }
+  
+  #c-box:checked ~ .c-list {
+    display: block;
+  }
+  
+  .c-list {
+    display: none;
+    margin-top: 18px;
+  }
+  
+  #height1 {
+    height: 50px;
+  }
+  
+  ul li {
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    margin-bottom: 6px;
+  }
+  
+  ul li:last-of-type {
+    border: 1px solid rgb(255, 255, 255, 0.5);
+  }
+  
+  #header ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    border-radius: 4px;
+  }
+  
+  #header ul li a {
+    display: block;
+    min-width: 12rem;
+    height: 2.5rem;
+    line-height: 2.6rem;
+    padding: 0 1.25rem;
+    /* 글자 사이 간격 */
+    letter-spacing: 0.2rem;
+    text-align: left;
+    font-size: 0.85rem;
+    border-bottom: 0;
+    color: white;
+    background-color: rgb(41, 39, 39);
+  }
+  
+  #header ul li a:hover {
+    background-color: rgb(255, 255, 255, 0.4);
+    color: rgb(8, 8, 8);
+    font-size: 14.5px;
+    font-weight: 700;
+  }
+  
+  #header ul li a:active {
+    background-color: rgb(255, 255, 255, 0.4);
+  }
+  section p {
+    margin-top: 490px;
+    color: #ccc;
+    font-size: 17px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+  }
+  footer {
+    padding: 20px;
+    margin-top: 20px;
+  }
