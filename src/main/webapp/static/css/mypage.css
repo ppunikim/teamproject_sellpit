@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  #wrap {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    min-height: 120vh;
+    width: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  header {
+    margin: 20px;
+  }
+  
+  form {
+    margin-left: 10px;
+  }
+  form #calenderdate {
+    width: 180px;
+    height: 4vh;
+    border-radius: 1rem;
+    margin: 5px auto;
+  }
+  form #healthcheck {
+    background-color: black;
+  }
+  form #datedata {
+    width: 250px;
+    height: 4vh;
+    border-radius: 0.3rem;
+    padding-left: 20px;
+  }
+  table {
+    border: 1px solid rgb(76, 76, 76);
+    margin: 10px auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  table tr td,
+  table tr th {
+    border: 1px solid rgb(168, 165, 165);
+    padding: 13px;
+  }
+  table tr td {
+    background-color: rgb(246, 246, 246);
+  }
+  table tr th {
+    background-color: #ddd;
+  }
+  section p {
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 80px auto;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #fff;
+    opacity: 0.8;
+  }
+  footer button {
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: rgb(45, 45, 45);
+    color: #ddd;
+    padding: 2px;
+  }
+  
