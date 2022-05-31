@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set value="${pageContext.request.contextPath}" var="rootPath" />
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ background-image: url(${rootPath}/static/images/bg.jpg);
 }
 </style>
 </head>
-  <link rel="stylesheet" href="${rootPath}/static/css/dayset.css?999" />
+  <link rel="stylesheet" href="${rootPath}/static/css/dayset.css" />
 
 <body>
  <header>
@@ -88,8 +88,8 @@ background-image: url(${rootPath}/static/images/bg.jpg);
       </table>
     </section>
     <footer class="team">
-      <a href="../calender.html">이전</a>
-      <a href="../KIM/3dayHealth-day1-easy01.html">다음</a>
+      <a href="calender.html">이전</a>
+      <a href="dayHealth.jsp">다음</a>
     </footer>
 </body>
 </html>

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  -webkit-text-size-adjust: none;
+  font-size: 10pt;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  line-height: 1;
+  -webkit-text-size-adjust: none;
+}
+header h2 {
+  padding: 10px;
+}
+header div:nth-of-type(2) {
+  margin-left: auto;
+}
+
+section:first-of-type {
+  display: flex;
+  justify-content: center;
+}
+
+section:first-of-type div {
+  overflow: hidden;
+}
+/* 배경사진만 바뀌도록 하는 방법은 이것으로 계속 사용하면 된다. */
+#wrap {
+  background-image: url(../image/bg.jpg);
+  background-size: cover;
+  min-height: 120vh;
+  width: 100%;
+}
+
+#guide {
+  display: none;
+}
+
+#guide:checked ~ .check1 {
+  display: block;
+}
+
+.check1 {
+  display: none;
+  margin-top: 18px;
+}
