@@ -17,12 +17,13 @@ form, div.login_info {
 }
 
 fieldset {
-	border: 3px outset black;
-	display: flex;
+	border: 30px solid transparent;
+	display: flex; 
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 30px;
+	border-radius: 10px;
 }
 
 legend {
@@ -64,6 +65,7 @@ color: white;
 width: 100px;
 padding: 10px;
 margin-top: 10px;
+border-radius: 40px;
 
 
 
@@ -76,8 +78,11 @@ box-shadow: 1px 1px 1px 1px black;
 }
 .login_info{
 border: 1px solid black;
+background-color: black; 
+color: white;
 text-align: center;
-padding-top: 10px
+padding-top: 10px;
+border-radius: 10px;
 }
 .ss{
 text-align: center;

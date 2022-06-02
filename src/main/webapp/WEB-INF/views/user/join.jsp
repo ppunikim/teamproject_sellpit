@@ -7,11 +7,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>회원가입 페이지</title>
 <style>
 form.join {
-	width: 60%;
-	margin: 100px auto;
 }
 
 form.join fieldset {
