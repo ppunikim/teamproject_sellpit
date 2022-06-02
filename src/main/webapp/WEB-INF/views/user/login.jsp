@@ -6,13 +6,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>로그인페이지</title>
 <style>
+
+body {
+background-image: url(${rootPath}/static/images/bg.jpg);
+}
 form, div.login_info {
-	width: 60%;
+	width: 330px; 
 	margin: 100px auto;
-	padding-bottom: 30px
+	padding-bottom: 30px;
+	text-align: center;
 	
 }
 
@@ -38,7 +45,10 @@ form input {
 	margin: 10px;
 	border: 2px solid black; 
 }
-body{
+form {
+	margin-bottom: 100px;
+}
+body {
 background-color: pink;
 }
 a{
@@ -55,9 +65,6 @@ color: white;
 font-weight: bold;
 
 }
-body{
-background-image: url(${rootPath}/static/images/bg.jpg);
-}
 
 button{
 background-color: black; 
@@ -73,17 +80,16 @@ border-radius: 40px;
 button:hover {
 	background-color: white;
 	color: black;
-box-shadow: 1px 1px 1px 1px black;
-	
+box-shadow: 0.5px 0.5px 1px 1px black;
 }
 .login_info{
 border: 1px solid black;
 background-color: black; 
 color: white;
-text-align: center;
 padding-top: 10px;
 border-radius: 10px;
 }
+
 .ss{
 text-align: center;
 
@@ -92,6 +98,7 @@ text-align: center;
 </style>
 </head>
 <body>
+<div class="background">
 	<form method="POST" autocomplete="off">
 		<fieldset>
 			<legend>로그인</legend>
@@ -119,10 +126,10 @@ text-align: center;
 				<b>성별 : </b>${USER.gender}</div>
 			
 		</c:if>
-		<c:if test="${empty USER}">
-			<div>로그인 정보가 없습니다</div>
+		<c:if test="${empty USER}" >
+			<div id="login_info">로그인 정보가 없습니다</div>
 		</c:if>
 	</div>
-
+	</div>
 </body>
 </html>
