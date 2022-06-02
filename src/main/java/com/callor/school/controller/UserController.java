@@ -171,4 +171,8 @@ public class UserController {
 	public String test02() {
 		return null;
 	}
+	@RequestMapping(value = "/login_ok", method = RequestMethod.GET)
+	   public String test03() {
+	      return null;
+	   }
 }
