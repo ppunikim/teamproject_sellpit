@@ -15,4 +15,7 @@
 * button type 에는 ```reset``` 도 있는데 이 type 을 form tag 에 포함된 input box 데이터를 모두 제거한다
 
 
+* test
+
+
 
