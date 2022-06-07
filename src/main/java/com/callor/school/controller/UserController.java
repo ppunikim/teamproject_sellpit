@@ -78,7 +78,7 @@ public class UserController {
 		
 		// view 로 보낼 message Protocol 을 setting 
 		model.addAttribute("LOGIN_MESSAGE",loginMessage);
-		return "user/login_ok";
+		return "user/calender";
 	
 	}
 

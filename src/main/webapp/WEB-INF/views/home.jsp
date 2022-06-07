@@ -82,7 +82,7 @@ color: white;
 					<li><a href="${rootPath}/user/join">회원가입</a></li>
 				</ul>
 				<div id="guest">
-					<a href="calender.html">게스트로 이용하기</a>
+					<a href="${rootPath}/user/calender">게스트로 이용하기</a>
 				</div>
 			</nav>
 
