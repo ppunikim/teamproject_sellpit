@@ -44,10 +44,11 @@
     margin: 10px auto;
     border-collapse: collapse;
     margin-top: 20px;
+    border-radius: 10px;
   }
   table tr td,
   table tr th {
-    border: 1px solid rgb(168, 165, 165);
+    border: 1px solid #fff;
     padding: 13px;
   }
   table tr td {

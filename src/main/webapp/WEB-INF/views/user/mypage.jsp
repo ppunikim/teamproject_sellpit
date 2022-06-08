@@ -16,7 +16,7 @@ a.last {
 	color: rgb(200, 199, 199);
 }
 </style>
-<link rel="stylesheet" href="${rootPath}/static/css/mypage.css" />
+<link rel="stylesheet" href="${rootPath}/static/css/mypage.css?ver=2022-06-08-003" />
 </head>
 
 <body>
@@ -71,10 +71,10 @@ a.last {
 		</section>
 		<footer>
 			<button>
-				<a href="KIM/3dayHealth-day1-easy05.html" class="last">이전 화면</a>
+				<a href="${rootPath}/user/calender" class="last">이전 화면</a>
 			</button>
 			<button>
-				<a href="main.html" class="last">첫 화면</a>
+				<a href="${rootPath}" class="last">첫 화면</a>
 			</button>
 		</footer>
 	</div>

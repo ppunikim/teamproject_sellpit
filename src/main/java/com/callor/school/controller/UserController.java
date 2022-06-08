@@ -162,7 +162,7 @@ public class UserController {
 		return null;
 	}
 	@RequestMapping(value = "/mypage", method = RequestMethod.GET)
-	public String test01() {
+	public String mypage() {
 		return null;
 	}
 
