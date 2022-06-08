@@ -18,7 +18,7 @@ body {
  <script type="text/javascript">
 
         const button_click = (e) =>{
-            window.open("${rootPath}/WEB-INF/views/user/timer.jsp", "타이머", "width=500px,height=550px")
+            window.open("${rootPath}/user/timer", "타이머", "width=500px,height=550px")
             e.target.style.backgroundColor = "rgb(56, 56, 164)"
             console.log(e.target)
         }

@@ -19,6 +19,9 @@ form div {
 	border-radius: 10px;
 	font-weight: 550;
 }
+#mypage {
+	color: #636364;
+}
 </style>
 <link rel="stylesheet" href="${rootPath}/static/css/calender.css" />
 </head>
@@ -71,6 +74,7 @@ form div {
 				먹는다고 다 살찌진 않는다.<br /> 많이 먹어서 살찔 뿐.
 			</p>
 		</section>
+		<p><a href="${rootPath}/user/mypage" id="mypage">mypage</a></p>
 		<footer>
 			<a href="${rootPath}">첫화면</a>
 		</footer>
