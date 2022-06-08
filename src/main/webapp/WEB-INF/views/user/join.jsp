@@ -17,7 +17,7 @@ form.join {
 }
 
 form.join fieldset {
-   border: 3px solid black;
+   border: 3px solid #373737;
    border-radius: 20px;
    padding: 10px 20px;
    
@@ -33,7 +33,7 @@ form div {
 form input {
    flex: 1;
    padding: 8px;
-   border: 2px solid black;
+   border: 1px solid transparent;
    border-radius: 10px
 }
 
@@ -58,14 +58,20 @@ background-image: url(${rootPath}/static/images/bg.jpg);
 }
 
 button{
-background-color: black;
-color:white;
+background-color:#1b1b1b;
+color:#fff;
 margin-left: 20px;
 padding: 10px;
 }
+#id-check:hover{
+color: cecdcd;
+background-color: #ee4c4c;
+border: 1px solid transparent;
+}
 button:hover{
-color: black;
-background-color: white;
+color: #fff;
+background-color: #black;
+border: 1px solid transparent;
 }
 </style>
 <script>
@@ -81,7 +87,7 @@ background-color: white;
          <legend>회원가입</legend>
          <div>
             <input name="username" placeholder="닉네임" autocomplete="off" />
-            <button class="id-check" type="button">중복검사</button>
+            <button class="id-check" type="button" id="id-check">중복검사</button>
          </div>
          <div class="username"></div>
          <div>

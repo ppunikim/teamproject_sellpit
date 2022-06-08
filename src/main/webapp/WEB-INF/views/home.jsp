@@ -19,6 +19,7 @@
 
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <!-- 
         viewport : 모바일 브라우저 화면 가로크기를 말한다
         content="width=device-width : 컨텐츠의 width를 각 디바이스 크기에 맞춘다
@@ -33,6 +34,7 @@
 <!-- ios에서 전화번호가 링크화되는 것 방지 -->
 <meta name="format-detection" content="telephone=no">
 <title>맨 처음 로그인 페이지</title>
+
 </head>
 <style>
 
@@ -54,7 +56,6 @@ color: white;
 }
 </style>
 <link rel="stylesheet" href="${rootPath}/static/css/main.css" />
-
 <body>
 	<div id="wrap">
 		<!-- Header -->

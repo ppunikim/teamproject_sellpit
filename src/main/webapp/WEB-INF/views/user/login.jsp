@@ -43,7 +43,7 @@ form input {
 	width: 80%;
 	padding: 10px;
 	margin: 10px;
-	border: 2px solid black; 
+	border: 2px solid #6f6969; 
 }
 form {
 	margin-bottom: 100px;
@@ -67,7 +67,7 @@ font-weight: bold;
 }
 
 button{
-background-color: black; 
+background-color:#1c1a1d; 
 color: white;
 width: 100px;
 padding: 10px;
@@ -78,13 +78,13 @@ border-radius: 40px;
 
 }
 button:hover {
-	background-color: white;
-	color: black;
+	background-color: #e4dfdf;
+	color: #5f5f5f;
 box-shadow: 0.5px 0.5px 1px 1px black;
 }
 .login_info{
-border: 1px solid black;
-background-color: black; 
+border: 1px solid transparent;
+background-color: #212121; 
 color: white;
 padding-top: 10px;
 border-radius: 10px;
