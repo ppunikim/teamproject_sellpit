@@ -6,7 +6,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Dagym</title>
 <style>
@@ -33,7 +35,7 @@ form div {
 					<h3>Do it List</h3>
 				</div>
 				<form id="calender" name="calender" action="값을 보낼 주소" method="post">
-					<div>2022년 05월 20일</div>
+					<input type="date">
 				</form>
 				<input id="a-box" type="radio" name="level" /> <label
 					class="abc-list" for="a-box">초급</label> <input id="b-box"
@@ -70,7 +72,7 @@ form div {
 			</p>
 		</section>
 		<footer>
-			<a href="./login.html">첫화면</a>
+			<a href="${rootPath}">첫화면</a>
 		</footer>
 	</div>
 </body>

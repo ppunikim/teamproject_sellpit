@@ -157,9 +157,8 @@ public class UserController {
 			return "FAIL";
 		}
 	}
-	
 	@RequestMapping(value = "/calender", method = RequestMethod.GET)
-	public String test() {
+	public String calender() {
 		return null;
 	}
 	@RequestMapping(value = "/mypage", method = RequestMethod.GET)
@@ -175,4 +174,12 @@ public class UserController {
 	   public String test03() {
 	      return null;
 	   }
+	@RequestMapping(value = "/dayHealth", method = RequestMethod.GET)
+	public String dayHealth() {
+		return null;
+	}
+	@RequestMapping(value = "/timer", method = RequestMethod.GET)
+	public String timer() {
+		return null;
+	}		
 }
