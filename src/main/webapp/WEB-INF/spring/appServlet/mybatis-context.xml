@@ -20,8 +20,8 @@
 			value="oracle.jdbc.driver.OracleDriver" />
 		<property name="url"
 			value="jdbc:oracle:thin:@localhost:1521:xe" />
-		<property name="username" value="logintest" />
-		<property name="password" value="1234" />
+		<property name="username" value="sellfit" />
+		<property name="password" value="sellfit" />
 	</bean>
 
 	<!-- SqlSessionFactory -->

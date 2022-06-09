@@ -17,7 +17,7 @@ body {
 	background-image: url("${rootPath}/static/images/bg.jpg");
 }
 </style>
-<link rel="stylesheet" href="${rootPath}/static/css/login_ok.css" />
+<link rel="stylesheet" href="${rootPath}/static/css/login_ok.css?20220609_001" />
 </head>
 <body>
 
