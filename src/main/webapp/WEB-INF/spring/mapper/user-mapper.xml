@@ -5,15 +5,15 @@
 
 <mapper namespace="com.callor.school.pesistance.UserDao">
 	<select id="selectAll" resultType="UserVO">
-		SELECT * FROM tbl_login
+		SELECT * FROM tbl_user
 	</select>
 	
 	<select id="findById" resultType="UserVO">
-		SELECT * FROM tbl_login WHERE username = #{username}
+		SELECT * FROM tbl_user WHERE username = #{username}
 	</select>
 	
 	<insert id="insert" parameterType="UserVO">
-		INSERT INTO tbl_login
+		INSERT INTO tbl_user
 			(
 				username, 
 				password, 
@@ -31,7 +31,7 @@
 			)
 	</insert>
 	<update id="update" parameterType="UserVO">
-		UPDATE tbl_login SET
+		UPDATE tbl_user SET
 				password = #{password}, 
 				name = #{name},
 				email = #{email},
@@ -40,7 +40,7 @@
 		WHERE username = #{username} 
 	</update>
 	<delete id="delete">
-		DELETE FROM tbl_login WHERE username = #{username}
+		DELETE FROM tbl_user WHERE username = #{username}
 	</delete>
 </mapper>
 
