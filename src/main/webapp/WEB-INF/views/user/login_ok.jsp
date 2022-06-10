@@ -32,7 +32,7 @@ margin: 30px;
 }
 
 div{
-margin: 200px auto;
+margin: 80px 0;
 
 }
 .no-user {
@@ -40,11 +40,17 @@ margin: 200px auto;
 	margin-left: 30px;
 }
 img{
-margin-left: 120px;
-
+	margin-left: 120px;
 }
+.content {
+	margin-bottom: 220px;
+}
+#nav_margin {
+	width: 300px;
+	margin: 0 auto;
+} 
 </style>
-<link rel="stylesheet" href="${rootPath}/static/css/login_ok.css" />
+<link rel="stylesheet" href="${rootPath}/static/css/login_ok.css?20220610_004" />
 </head>
 <body>
 
@@ -84,12 +90,11 @@ margin-left: 120px;
 						<div id="icon_solid"></div>
 						<div class="content">
 							<div class="inner">
-								<h1>${USER.username} 님</h1>
-
+								<h2>${USER.username} 님</h2>
 							</div>
 						</div>
 						<div id="icon_solid1"></div>
-						<nav>
+						<nav id="nav_margin">
 							<ul>
 								<li><a href="${rootPath}/user/calender">운동 시작</a></li>
 								<li><a href="${rootPath}/user/mypage">마이페이지</a></li>
