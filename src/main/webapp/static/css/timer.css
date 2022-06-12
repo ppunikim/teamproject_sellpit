@@ -1,0 +1,46 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#timer {
+  /* position 요소 자기 자신을 기준으로 배치 */
+  position: relative;
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  color: white;
+  background-color: black;
+}
+header div {
+  height: 100px;
+  font-size: 2rem;
+}
+#close {
+  position: relative;
+  border: 1px solid black;
+  width: 45px;
+  height: 45px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  color: white;
+  background-color: black;
+}

@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  -webkit-text-size-adjust: none;
+  font-size: 10pt;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  line-height: 1;
+  -webkit-text-size-adjust: none;
+}
+header h2 {
+  padding: 10px;
+  margin-left: 3px;
+}
+header div:nth-of-type(2) {
+  margin-left: auto;
+}
+
+section:first-of-type {
+  display: flex;
+  justify-content: center;
+}
+
+section:first-of-type div {
+  overflow: hidden;
+}
+.guidecheck {
+  font-weight: 700;
+}
+.blankbutton {
+  background-color: aliceblue;
+  width: 100px;
+  padding: 5px 0;
+  text-align: center;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: auto;
+  border: 1px solid rgba(83, 83, 83, 0.5);
+}
+.check1 {
+  background-color: rgba(233, 229, 229, 0.441);
+  padding-top: 10px;
+  padding-bottom: 16px;
+  padding-left: 5px;
+  padding-right: 3px;
+  line-height: 19px;
+  font-weight: 520;
+}
+.check1 h4 {
+  font-size: 14px;
+}
+img {
+  margin-top: 13px;
+  margin-bottom: 20px;
+}
+/*
+#imageletpull {
+  background-image: url(../image/dayHealth/letpulldown.png);
+  background-size: cover;
+  height: 38vh;
+}
+*/
+/* 배경사진만 바뀌도록 하는 방법은 이것으로 계속 사용하면 된다. */
+#wrap {
+  background-image: url(../image/bg.jpg);
+  background-size: cover;
+  min-height: 120vh;
+  width: 100%;
+}
+
+#guide {
+  display: none;
+}
+
+#guide:checked ~ .check1 {
+  display: block;
+}
+
+.check1 {
+  display: none;
+  margin-top: 7px;
+  border-radius: 15px;
+}
+
+.healthpage {
+  background-color: rgba(247, 245, 241, 0.8);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  width: 70vw;
+  padding: 5px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+  margin: 5px auto;
+}
+.healthpage input {
+  width: 50px;
+  height: 18px;
+}
+section div h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.alerts {
+  background-color: rgb(78, 76, 76);
+  color: rgb(229, 227, 227);
+  border-radius: 10px;
+  border-collapse: collapse;
+  font-size: smaller;
+}
+.alerts:focus {
+  background-color: rgb(56, 56, 164);
+}
+/*footer {
+  margin-top: 30px;
+  margin-left: 30%;
+}*/
+footer ul {
+  max-width: 50%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 17px;
+  margin: 30px auto;
+  margin-top: 70px;
+}
+footer ul li:hover {
+  background-color: rgb(56, 56, 164);
+  border: 1px solid rgba(80, 80, 80, 0.5);
+  color: #ddd;
+}
+footer ul li {
+  background-color: rgb(33, 32, 32);
+  color: rgb(227, 224, 224);
+  border-radius: 3px;
+  text-align: center;
+  padding: 3px 0;
+}
+footer a {
+  color: #fff;
+  padding: 15px;
+}
+
+.hidden {
+  display: none;
+}
+#bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 20%;
+  height: auto;
+}
+.buttons {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  color: #fff;
+  background-color: rgb(77, 77, 77);
+}
