@@ -46,25 +46,25 @@ form div {
 
 				<input id="c-box" type="radio" name="level" /> <label
 					class="abc-list" for="c-box">상급</label>
-
+  
 				<ul class="a-list">
-					<li><a href="${rootPath}/user/dayset">1.일주일운동3일루틴 </a></li>
-					<li><a href="./LIM/daySet4-1.html">2.일주일운동4일루틴</a></li>
-					<li><a href="./LIM/daySet5-1.html">3.일주일운동5일루틴</a></li>
-					<li><a href="./LIM/daySet6-1.html">4.일주일운동6일루틴</a></li>
+					<li><a href="${rootPath}/user/dayset">${DIBISION} </a></li>
+					<li><a href="${rootPath}/user/dayset">2.일주일운동4일루틴</a></li>
+					<li><a href="${rootPath}/user/dayset">3.일주일운동5일루틴</a></li>
+					<li><a href="${rootPath}/user/dayset">4.일주일운동6일루틴</a></li>
 				</ul>
 
 				<ul class="b-list">
-					<li><a href="./LIM/N-dayset3-1.html">1. 일주일운동3일루틴</a></li>
-					<li><a href="./LIM/N-dayset4-1.html">2. 일주일운동4일루틴</a></li>
-					<li><a href="./LIM/N-dayset5-1.html">3. 일주일운동5일루틴</a></li>
-					<li><a href="./LIM/N-dayset6-1.html">4. 일주일운동6일루틴</a></li>
+					<li><a href="${rootPath}/user/dayset">1. 일주일운동3일루틴</a></li>
+					<li><a href="${rootPath}/user/dayset">2. 일주일운동4일루틴</a></li>
+					<li><a href="${rootPath}/user/dayset">3. 일주일운동5일루틴</a></li>
+					<li><a href="${rootPath}/user/dayset">4. 일주일운동6일루틴</a></li>
 				</ul>
 
 				<ul class="c-list">
-					<li><a href="./LIM/H-dayset4-1.html">1. 일주일운동4일루틴</a></li>
-					<li><a href="./LIM/H-dayset5-1.html">1. 일주일운동5일루틴</a></li>
-					<li><a href="">2. 일주일운동5일루틴</a></li>
+					<li><a href="${rootPath}/user/dayset">1. 일주일운동4일루틴</a></li>
+					<li><a href="${rootPath}/user/dayset">1. 일주일운동5일루틴</a></li>
+					<li><a href="${rootPath}/user/dayset">2. 일주일운동5일루틴</a></li>
 				</ul>
 				<div id="height1"></div>
 			</div>

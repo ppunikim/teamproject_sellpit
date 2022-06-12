@@ -1,5 +1,7 @@
 package com.callor.school.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -9,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.callor.school.model.SchVO;
 import com.callor.school.model.UserVO;
+import com.callor.school.service.SchService;
 import com.callor.school.service.UserService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -20,8 +24,11 @@ import lombok.extern.slf4j.Slf4j;
 public class UserController {
 
 	private final UserService userService;
-	public UserController(UserService userService) {
+	private final SchService schService;
+	
+	public UserController(UserService userService,SchService schService ) {
 		this.userService = userService;
+		this.schService = schService;
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -158,7 +165,16 @@ public class UserController {
 		}
 	}
 	@RequestMapping(value = "/calender", method = RequestMethod.GET)
-	public String calender() {
+	public String calender(Model model) {
+		List<SchVO> schList = schService.idAll();
+		model.addAttribute("DIBISION",schList);
+		
+		return null;
+	}
+	
+	@RequestMapping(value = "/calender", method = RequestMethod.POST)
+	public String calender( ) {
+		
 		return null;
 	}
 	@RequestMapping(value = "/mypage", method = RequestMethod.GET)
