@@ -1,7 +1,10 @@
 package com.callor.school.service;
 
-import com.callor.school.pesistance.SchDao;
+import java.util.List;
 
-public interface SchService extends SchDao{
-	
+import com.callor.school.model.SchVO;
+import com.callor.school.pesistance.GenericDao;
+
+public interface SchService extends GenericDao<SchVO, String>{
+	public List<SchVO> idAll();
 }

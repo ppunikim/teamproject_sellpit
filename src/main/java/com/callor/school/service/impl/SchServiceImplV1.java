@@ -45,11 +45,16 @@ public class SchServiceImplV1 implements SchService {
 		return 0;
 	}
 
+	
+
 	@Override
 	public List<SchVO> idAll() {
 		List<SchVO> sch = schDao.idAll();
 		return sch;
 	}
+
+
+
 
 	
 
