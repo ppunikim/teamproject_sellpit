@@ -1,7 +1,5 @@
 package com.callor.school.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -165,8 +163,9 @@ public class UserController {
 		}
 	}
 	@RequestMapping(value = "/calender", method = RequestMethod.GET)
-	public String calender(Model model) {
-		List<SchVO> schList = schService.idAll();
+	public String calender(Model model, String num) {
+		
+		SchVO schList = schService.findById("D040");
 		model.addAttribute("DIBISION",schList);
 		
 		return null;
@@ -183,8 +182,12 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/dayset", method = RequestMethod.GET)
-	public String test02() {
+	public String test02(Model model, String num) {
+		SchVO schList = schService.findById("D040");
+		model.addAttribute("DIBISION",schList);
+		
 		return null;
+	
 	}
 	@RequestMapping(value = "/login_ok", method = RequestMethod.GET)
 	   public String test03() {

@@ -41,14 +41,14 @@ form div {
 				</div>
 				
 				<input id="a-box" type="radio" name="level" /> <label
-					class="abc-list" for="a-box">초급</label> <input id="b-box"
+					class="abc-list" for="a-box">${DIBISION.sc_label}</label> <input id="b-box"
 					type="radio" name="level" /> <label class="abc-list" for="b-box">중급</label>
 
 				<input id="c-box" type="radio" name="level" /> <label
 					class="abc-list" for="c-box">상급</label>
   
 				<ul class="a-list">
-					<li><a href="${rootPath}/user/dayset">${DIBISION} </a></li>
+					<li><a href="${rootPath}/user/dayset">${DIBISION.sc_division}</a></li>
 					<li><a href="${rootPath}/user/dayset">2.일주일운동4일루틴</a></li>
 					<li><a href="${rootPath}/user/dayset">3.일주일운동5일루틴</a></li>
 					<li><a href="${rootPath}/user/dayset">4.일주일운동6일루틴</a></li>

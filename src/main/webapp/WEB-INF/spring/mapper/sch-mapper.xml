@@ -9,7 +9,7 @@
 	</select>
 	
 	<select id="idAll" resultType="SchVO">
-		SELECT * FROM tbl_sch WHERE sc_id = 'D001'
+		SELECT * FROM tbl_sch WHERE sc_id = #{sc_id}
 	</select>
 	
 	<select id="findById" resultType="SchVO">
@@ -41,7 +41,7 @@
 		WHERE sc_id = #{sc_id} 
 	</update>
 	<delete id="delete">
-		DELETE FROM tbl_sch WHERE sc_ID = #{sc_id}
+		DELETE FROM tbl_sch WHERE sc_id = #{sc_id}
 	</delete>
 </mapper>
 

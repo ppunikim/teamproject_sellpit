@@ -19,10 +19,9 @@ body {
 <link rel="stylesheet" href="${rootPath}/static/css/dayset.css" />
 <body>
 	<header>
-		<h2>일주일 운동 3일</h2>
+		<h2>${DIBISION.sc_division}</h2>
 		<select id="play">
-			<option value="day1" selected="selected">day1) 등,가슴,어깨,하체,이두
-				,삼두</option>
+			<option value="day1" selected="selected">${DIBISION.sc_part}</option>
 			<option value="day2">day2) 등, 가슴 ,어깨 ,하체 ,이두 ,코어</option>
 			<option value="day3">day3) 등 ,가슴 ,어깨 ,하체 ,삼두, 코어</option>
 		</select>

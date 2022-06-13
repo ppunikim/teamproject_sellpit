@@ -26,8 +26,7 @@ public class SchServiceImplV1 implements SchService {
 	}
 	@Override
 	public SchVO findById(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		return schDao.findById(id);
 	}
 	@Override
 	public int insert(SchVO vo) {
@@ -44,19 +43,19 @@ public class SchServiceImplV1 implements SchService {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
 	
-
 	@Override
 	public List<SchVO> idAll() {
 		List<SchVO> sch = schDao.idAll();
 		return sch;
 	}
 
-
-
-
-	
+	@Override
+	public String num() {
+		
+		
+		return null;
+	}
 
 
 	
