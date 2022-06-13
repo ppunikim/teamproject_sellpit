@@ -113,7 +113,7 @@ text-align: center;
 				</div>
 	</form>
 	<div class="login_info">
-		<c:if test="${not empty USER }">
+		<c:if test="${not empty USER}">
 			<div>
 				<b>아이디 : </b>${USER.username}</div>
 			<div>

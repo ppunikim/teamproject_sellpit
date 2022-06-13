@@ -16,24 +16,65 @@
 body {
 	background-image: url("${rootPath}/static/images/bg.jpg");
 }
+.not-login:hover{
+color: black;
+background-color: white;
+
+
+}
+.not-login{
+margin-left: 30px ;
+background-color: black;
+color: white;
+padding: 10px;
+border-radius: 5px;
+margin: 30px;
+}
+
+div{
+margin: 80px 0;
+
+}
+.no-user {
+	margin-bottom: 50px;
+	margin-left: 30px;
+}
+img{
+	margin-left: 120px;
+}
+.content {
+	margin-bottom: 220px;
+}
+#nav_margin {
+	width: 300px;
+	margin: 0 auto;
+} 
 </style>
-<link rel="stylesheet" href="${rootPath}/static/css/login_ok.css?20220609_001" />
+
+<link rel="stylesheet" href="${rootPath}/static/css/login_ok.css?20220610_004" />
+
 </head>
 <body>
 
 	<h3>${LOGIN.message}</h3>
-
+		
 	<c:choose>
+	
 		<c:when test="${LOGIN_MESSAGE == 'USERNAME FAIL' }">
-			<h2>USER NAME(사용자 ID) 가 없습니다</h2>
-			<a href="${rootPath}/user/login">로그인 다시 하기</a>
-			<a href="${rootPath}">홈으로 가기</a>
+		<div>
+		<img src="${rootPath}/static/images/do it list.png">
+			<h3 class="no-user">USER NAME(사용자 ID) 가 없습니다</h3>
+			<a class="not-login" href="${rootPath}/user/login">로그인 다시 하기</a>
+			<a class="not-login" href="${rootPath}">홈으로 가기</a>
+			</div>
 		</c:when>
 		<c:when test="${LOGIN_MESSAGE == 'PASSWORD FAIL' }">
 			<h2>비밀번호가 잘못되었습니다</h2>
 			<a href="${rootPath}/user/login">로그인 다시 하기</a>
 			<a href="${rootPath}">홈으로 가기</a>
+		
 		</c:when>
+		
 		<c:otherwise>
 			<c:if test="${not empty USER}">
 				<%-- <h3>로그인 성공!!!</h3>
@@ -51,12 +92,11 @@ body {
 						<div id="icon_solid"></div>
 						<div class="content">
 							<div class="inner">
-								<h1>${USER.username} 님</h1>
-
+								<h2>${USER.username} 님</h2>
 							</div>
 						</div>
 						<div id="icon_solid1"></div>
-						<nav>
+						<nav id="nav_margin">
 							<ul>
 								<li><a href="${rootPath}/user/calender">운동 시작</a></li>
 								<li><a href="${rootPath}/user/mypage">마이페이지</a></li>

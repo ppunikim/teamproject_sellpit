@@ -36,10 +36,10 @@ form div {
 				<div class="inner">
 					<h2>셀핏</h2>
 					<h3>Do it List</h3>
+					<br>
+					<br>
 				</div>
-				<form id="calender" name="calender" action="값을 보낼 주소" method="post">
-					<input type="date">
-				</form>
+				
 				<input id="a-box" type="radio" name="level" /> <label
 					class="abc-list" for="a-box">초급</label> <input id="b-box"
 					type="radio" name="level" /> <label class="abc-list" for="b-box">중급</label>
