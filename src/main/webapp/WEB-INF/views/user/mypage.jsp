@@ -16,7 +16,7 @@ a.last {
 	color: rgb(200, 199, 199);
 }
 </style>
-<link rel="stylesheet" href="${rootPath}/static/css/mypage.css?ver=2022-06-08-003" />
+<link rel="stylesheet" href="${rootPath}/static/css/mypage.css?ver=2022-06-13-001" />
 </head>
 
 <body>
@@ -24,9 +24,9 @@ a.last {
 		<header>
 			<h2>마이페이지</h2>
 		</header>
-		<form>
+		<form method="GET">
 			<div>
-				<input type="date" name="calender" id="calenderdate" />
+				<input type="date" name="my_date" id="calenderdate" />
 			</div>
 			<input type="text" placeholder="day1 가슴 + 삼두" id="datedata" />
 		</form>
@@ -67,7 +67,6 @@ a.last {
 				우리가 늙어서 <br />운동을 그만두는 것이 아니라,<br /> 우리가 운동을 <br />그만두기 때문에 늙는
 				것이다.
 			</p>
-			<h1>오늘 총 운동시간 : 1h 30m</h1>
 		</section>
 		<footer>
 			<button>

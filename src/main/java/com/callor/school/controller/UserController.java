@@ -161,10 +161,6 @@ public class UserController {
 	public String calender() {
 		return null;
 	}
-	@RequestMapping(value = "/mypage", method = RequestMethod.GET)
-	public String mypage() {
-		return null;
-	}
 
 	@RequestMapping(value = "/dayset", method = RequestMethod.GET)
 	public String test02() {
@@ -174,10 +170,7 @@ public class UserController {
 	   public String test03() {
 	      return null;
 	   }
-	@RequestMapping(value = "/dayHealth", method = RequestMethod.GET)
-	public String dayHealth() {
-		return null;
-	}
+
 	@RequestMapping(value = "/timer", method = RequestMethod.GET)
 	public String timer() {
 		return null;
