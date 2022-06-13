@@ -3,15 +3,14 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.callor.school.pesistance.MypageDao">
-	<select id="selectAll" resultType="MypageVO">
-		SELECT * FROM tbl_mypage
+<mapper namespace="com.callor.school.pesistance.DayHealthDao">
+	<select id="selectAll" resultType="DayHealthVO">
+		SELECT * FROM tbl_dayhealth
 	</select>
 
- 	<select id="create_mypage_table">
- 		CREATE TABLE tbl_mypage (
- 			my_onlyseq		NUMBER			PRIMARY KEY,
- 			my_seq			NUMBER			NOT NULL,
+ 	<select id="create_mypage_dayhealth">
+ 		CREATE TABLE tbl_dayhealth (
+ 			my_seq			NUMBER			PRIMARY KEY,
  			my_username		nVARCHAR2(50)	NOT NULL,
  			my_date			VARCHAR2(15)	NOT NULL,
  			my_dayset		nVARCHAR2(30)	NOT NULL,
