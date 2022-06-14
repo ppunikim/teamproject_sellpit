@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.callor.school.model.SchVO;
 import com.callor.school.model.UserVO;
-import com.callor.school.service.SchService;
 import com.callor.school.service.UserService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -22,11 +20,8 @@ import lombok.extern.slf4j.Slf4j;
 public class UserController {
 
 	private final UserService userService;
-	private final SchService schService;
-	
-	public UserController(UserService userService,SchService schService ) {
+	public UserController(UserService userService) {
 		this.userService = userService;
-		this.schService = schService;
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -162,41 +157,16 @@ public class UserController {
 			return "FAIL";
 		}
 	}
-	@RequestMapping(value = "/calender", method = RequestMethod.GET)
-	public String calender(Model model, String num) {
-		
-		SchVO schList = schService.findById("D040");
-		model.addAttribute("DIBISION",schList);
-		
-		return null;
-	}
-	
-	@RequestMapping(value = "/calender", method = RequestMethod.POST)
-	public String calender( ) {
-		
-		return null;
-	}
-	@RequestMapping(value = "/mypage", method = RequestMethod.GET)
-	public String mypage() {
-		return null;
-	}
 
 	@RequestMapping(value = "/dayset", method = RequestMethod.GET)
-	public String test02(Model model, String num) {
-		SchVO schList = schService.findById("D040");
-		model.addAttribute("DIBISION",schList);
-		
+	public String test02() {
 		return null;
-	
 	}
 	@RequestMapping(value = "/login_ok", method = RequestMethod.GET)
 	   public String test03() {
 	      return null;
 	   }
-	@RequestMapping(value = "/dayHealth", method = RequestMethod.GET)
-	public String dayHealth() {
-		return null;
-	}
+
 	@RequestMapping(value = "/timer", method = RequestMethod.GET)
 	public String timer() {
 		return null;

@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>난이도 고르는 페이지</title>
+<title>Dagym</title>
 <style>
 form div {
 	border: 2px solid rgb(221, 222, 223);
@@ -22,10 +22,8 @@ form div {
 #mypage {
 	color: #636364;
 }
-
-
 </style>
-<link rel="stylesheet" href="${rootPath}/static/css/calender.css?20220614_002" />
+<link rel="stylesheet" href="${rootPath}/static/css/calender.css" />
 </head>
 
 
@@ -49,23 +47,25 @@ form div {
 				<input id="c-box" type="radio" name="level" /> 
 				<label class="abc-list" for="c-box">상급</label>
 
-				<ol class="a-list begin-box">
-					<c:forEach items="${MENUMAPS.BEGIN}" var="MENU">
-						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일 ${MENU.sc_division}루틴 </a></li>
-					</c:forEach>
-				</ol>
+				<ul class="a-list">
+					<li><a href="${rootPath}/user/dayset">1.일주일 3일루틴 </a></li>
+					<li><a href="./LIM/daySet4-1.html">2.일주일 4일루틴</a></li>
+					<li><a href="./LIM/daySet5-1.html">3.일주일 5일루틴</a></li>
+					<li><a href="./LIM/daySet6-1.html">4.일주일 6일루틴</a></li>
+				</ul>
 
-				<ol class="b-list middle-box">
-					<c:forEach items="${MENUMAPS.MIDDLE}" var="MENU">
-						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일 ${MENU.sc_division}루틴 </a></li>
-					</c:forEach>
-				</ol>
+				<ul class="b-list">
+					<li><a href="./LIM/N-dayset3-1.html">1. 일주일운동3일루틴</a></li>
+					<li><a href="./LIM/N-dayset4-1.html">2. 일주일운동4일루틴</a></li>
+					<li><a href="./LIM/N-dayset5-1.html">3. 일주일운동5일루틴</a></li>
+					<li><a href="./LIM/N-dayset6-1.html">4. 일주일운동6일루틴</a></li>
+				</ul>
 
-				<ol class="c-list adv-box">
-					<c:forEach items="${MENUMAPS.ADV}" var="MENU">
-						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일 ${MENU.sc_division}루틴 </a></li>
-					</c:forEach>
-				</ol>
+				<ul class="c-list">
+					<li><a href="./LIM/H-dayset4-1.html">1. 일주일운동4일루틴</a></li>
+					<li><a href="./LIM/H-dayset5-1.html">1. 일주일운동5일루틴</a></li>
+					<li><a href="">2. 일주일운동5일루틴</a></li>
+				</ul>
 				<div id="height1"></div>
 			</div>
 		</header>

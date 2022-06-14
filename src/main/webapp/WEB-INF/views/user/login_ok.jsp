@@ -50,7 +50,9 @@ img{
 	margin: 0 auto;
 } 
 </style>
+
 <link rel="stylesheet" href="${rootPath}/static/css/login_ok.css?20220610_004" />
+
 </head>
 <body>
 
