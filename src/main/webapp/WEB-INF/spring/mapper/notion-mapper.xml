@@ -4,21 +4,18 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.callor.school.pesistance.NotionDao">
-	<select id="selectAll" resultType="NotionVO">
-		SELECT * FROM tbl_notion
-	</select>
-
+	
 	<insert id="insert" parameterType="NotionVO">
 		<selectKey keyProperty="no_seq" resultType="Long" order="BEFORE">
 			SELECT seq_notion.NEXTVAL FROM DUAL			
 		</selectKey>
 		INSERT INTO tbl_notion(
-		no_seq, no_date, no_time, no_writer, no_subject, no_content
-		)
-		VALUES(
+			no_seq, no_date, no_time, no_writer, no_subject, no_content
+			) VALUES(
 			#{no_seq}, #{no_date}, #{no_time}, #{no_writer},  #{no_subject}, #{no_content}
-		)
+			)
 	</insert>
+	
 
 	<select id="create_notion_table">
 		CREATE TABLE tbl_notion (
@@ -30,16 +27,21 @@
 			no_content	nVARCHAR2(1000)	NOT NULL
 	</select>
 	
-	<select id="create_notion_notion">
+	<select id="create_notion_seq">
 		CREATE SEQUENCE seq_notion
 		INCREMENT BY 1 START WITH 1
 	</select>
+	
+	<select id="selectAll" resultType="NotionVO">
+		SELECT * FROM tbl_notion
+	</select>
 
+
+<!-- 
 	<select id="findById" resultType="NotionVO">
 		SELECT * FROM tbl_notion WHERE
 		notion_seq = #{notion_seq}
 	</select>
-<!-- 
  <insert id="insert" parameterType="DaySHVO">
 		INSERT INTO tbl_daysh
 		(
