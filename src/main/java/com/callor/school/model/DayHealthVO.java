@@ -1,11 +1,12 @@
-package com.callor.school.controller;
+package com.callor.school.model;
 
-public class DaySHController {
-
+public class DayHealthVO {
 	
-	private String daysh_seq;
+
+	private Long daysh_seq;
 	private String daysh_username;
 	private String daysh_date;
 	private String daysh_daysetid;
 	private String daysh_dayhealthid;
+
 }

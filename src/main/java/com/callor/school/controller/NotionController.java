@@ -31,7 +31,7 @@ public class NotionController {
 		
 		NotionVO notionVO = NotionVO.builder().no_date(dayFormat.format(date))
 									.no_time(timeFormat.format(date))
-									.no_write("")
+									.no_writer("")
 									.build();
 		model.addAttribute("NOTION", notionVO);
 		return "user/notion";
