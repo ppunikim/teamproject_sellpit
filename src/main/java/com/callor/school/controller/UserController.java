@@ -157,10 +157,6 @@ public class UserController {
 			return "FAIL";
 		}
 	}
-	@RequestMapping(value = "/calender", method = RequestMethod.GET)
-	public String calender() {
-		return null;
-	}
 
 	@RequestMapping(value = "/dayset", method = RequestMethod.GET)
 	public String test02() {

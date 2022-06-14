@@ -15,8 +15,11 @@ a.last {
 	text-decoration: none;
 	color: rgb(200, 199, 199);
 }
+button:nth-of-type(2) {
+	margin: 0 10px;
+}
 </style>
-<link rel="stylesheet" href="${rootPath}/static/css/mypage.css?ver=2022-06-13-001" />
+<link rel="stylesheet" href="${rootPath}/static/css/mypage.css?ver=2022-06-14-001" />
 </head>
 
 <body>
@@ -71,6 +74,9 @@ a.last {
 		<footer>
 			<button>
 				<a href="${rootPath}/user/calender" class="last">이전 화면</a>
+			</button>
+			<button>
+				<a href="${rootPath}/user/notion" class="notion  last">게시판</a>
 			</button>
 			<button>
 				<a href="${rootPath}" class="last">첫 화면</a>
