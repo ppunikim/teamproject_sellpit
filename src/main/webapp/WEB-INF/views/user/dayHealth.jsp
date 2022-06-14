@@ -108,7 +108,7 @@ body {
 				<li><a href="3dayHealth-day1-easy03.html">3</a></li>
 				<li><a href="3dayHealth-day1-easy04.html">4</a></li>
 				<li><a href="3dayHealth-day1-easy05.html">5</a></li>
-				<li><a href="3dayHealth-day1-easy02.html">&gt;</a></li>
+				<li><a href="${rootPath}/user/mypage">&gt;</a></li>
 			</ul>
 		</footer>
 	</div>
