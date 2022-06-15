@@ -20,14 +20,26 @@ button:last-of-type {
 }
 </style>
 
-<script>
-	const rootPath = "${rootPath}"
+<script type="text/javascript">
+
+        const button_click = (e) =>{
+            window.open("${rootPath}/user/timer", "타이머", "width=500px,height=550px")
+            e.target.style.backgroundColor = "rgb(56, 56, 164)"
+            console.log(e.target)
+        }
+
+        document.addEventListener("DOMContentLoaded",()=>{
+            const buttons = document.querySelectorAll("button.alerts")
+            for(let i = 0 ; i < buttons.length ; i++) {
+                buttons[i].addEventListener("click",button_click)
+            }
+        })
 
 </script>
-<script src="${rootPath}/static/js/dayhealth.js?20220615_003"></script>
 </head>
 <link rel="stylesheet"
-	href="${rootPath}/static/css/dayHealth.css?ver=2022-06-08-008">
+	href="${rootPath}/static/css/dayHealth.css?ver=2022-06-08-005">
+
 <body>
 	<div id="wrap">
 		<header>
@@ -39,15 +51,20 @@ button:last-of-type {
 				for="guide"><div class="blankbutton">운동 가이드</div></label>
 			<div class="check1">
 				<h4>운동 설명</h4>
-				<br />랫 풀다운은 등근육 운동에서도 초급자가 하기 좋은 운동이에요.<br /> 초급자가 처음에 도전하기 좋고
-				탄탄함을 높여주기 괜찮은 운동이라서 등운동이 처음인분들에게는 랫풀다운을 추천드려요. <br /> <br />
+				<c:forEach items="${EXP}" var="EE">
+				${EE.ex_content}<br>
+				
+				</c:forEach>
 				<h4>운동 가이드</h4>
-				<br /> 1. 어깨너비보다 조금 넓게 바를 잡아주세요.<br /> 2. 팔꿈치가 뒤로 빠지는 것이 아니라 바닥을
-				찍는다는 생각 으로 바를 당겨주세요.<br /> 3. 당기는 위치는 배 쪽이 아닌 쇄골 쪽으로 당겨주세요.<br />
-				4. 어깨와 팔을 완전하게 펴면 어깨에 무리가 갈수 있으니 주의해주세요.<br /> <br />
+				<c:forEach items="${GUID}" var="GG">
+				${GG.gd_content}<br>
+				
+				</c:forEach>
 				<h4>호흡법</h4>
-				<br /> 1. 힘을 뺀 후 숨을 들이마십니다.<br /> 2. 내려온 최고 정점에서 호흡을 뱉고 다시 , 흡입한
-				상태에 서 올라갔다가 내쉬고를 반복합니다.
+				<c:forEach items="${BRE}" var="BB">
+				${BB.br_contenth}<br>
+				
+				</c:forEach>
 			</div>
 		</header>
 		<section>
@@ -65,11 +82,13 @@ button:last-of-type {
 				<c:forEach begin="1" end="${HEALTH.sl_set}" varStatus="INDEX">
 					<div class="healthpage list">
 						<span>${INDEX.count} set )</span>
+
 						<form action="${rootPath}/user/dayHealth" method="POST" class="send">
 						<input name="my_dayset" type="hidden" value="${INDEX.count}">
 						<input name="my_list" type="hidden" value="${HEALTH.list_name}">
 						<input name="sc_id" type="hidden" value="${HEALTH.sl_scid}">
 						<input name="sl_listid" type="hidden" value="${HEALTH.sl_listid}">
+
 						<input placeholder="${HEALTH.sl_weight}" name="my_weight" class="kg"><label>kg</label>
 						<input placeholder="${HEALTH.sl_rep}" name="my_rep" class="rep"><label>회</label>
 						<button type="button" class="alerts" >체크</button>

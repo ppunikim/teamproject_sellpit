@@ -19,6 +19,13 @@ a.last {
 button:nth-of-type(2) {
 	margin: 0 10px;
 }
+
+
+div {
+
+	margin-top: 20px;
+	
+}
 </style>
 <link rel="stylesheet"
 	href="${rootPath}/static/css/mypage.css?ver=2022-06-14-001" />
@@ -68,9 +75,8 @@ button:nth-of-type(2) {
 			</tr>
 		</table>
 		<section>
-			<div>
-				
-			</div>
+
+			<div>${MESSAGE}</div>
 		</section>
 		<footer>
 			<button>
