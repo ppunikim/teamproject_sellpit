@@ -11,10 +11,11 @@
  	<select id="create_mypage_dayhealth">
  		CREATE TABLE tbl_dayhealth (
  			my_seq          NUMBER          PRIMARY KEY,
- 			my_username		nVARCHAR2(50),
- 			my_date			VARCHAR2(15)	,
-			my_weight		VARCHAR2(15)	,
-			my_rep			VARCHAR2(15)	
+ 			my_username		nVARCHAR2(50)   NOT NULL,
+ 			my_list         nVARCHAR2(50)   NOT NULL,
+ 			my_date			VARCHAR2(15)	NOT NULL,
+			my_weight		VARCHAR2(15)	NOT NULL,
+			my_rep			VARCHAR2(15)	NOT NULL
  		)
  	</select>
 
@@ -24,12 +25,14 @@
 			(
 				my_seq,
 				my_username, 
+				my_list,
 				my_date, 
 				my_weight, 
 				my_rep
 			) VALUES (
-				#{my_seq},
-				#{my_username}, 
+				seq_dayhealth.nextval,
+				#{my_username},
+				#{my_list},  
 				#{my_date}, 
 				#{my_weight},
 				#{my_rep}
