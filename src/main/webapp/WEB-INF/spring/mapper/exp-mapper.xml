@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.callor.school.pesistance.ExpDao">
+	<select id="selectAll" resultType="ExpVO">
+		SELECT * FROM tbl_exp
+		
+		
+	</select>
+	<select id="getGuid" resultType="ExpVO">
+SELECT * FROM tbl_guid
+		where gd_listid = #{list_id}		
+		
+	</select>
+	
+	<select id="findById" resultType="ExpVO">
+		SELECT * FROM tbl_user WHERE username = #{username}
+	</select>
+	
+	<insert id="insert" parameterType="ExpVO">
+		INSERT INTO tbl_user
+			(
+				username, 
+				password, 
+				name, 
+				email,
+				gender, 
+				role
+			) VALUES (
+				#{username}, 
+				#{password}, 
+				#{name}, 
+				#{email},
+				#{gender},
+				#{role}
+			)
+	</insert>
+	<update id="update" parameterType="ExpVO">
+		UPDATE tbl_user SET
+				password = #{password}, 
+				name = #{name},
+				email = #{email},
+				gender = #{gender},
+				role = #{role}
+		WHERE username = #{username} 
+	</update>
+	<delete id="delete">
+		DELETE FROM tbl_user WHERE username = #{username}
+	</delete>
+</mapper>
+
+
+
+
+
