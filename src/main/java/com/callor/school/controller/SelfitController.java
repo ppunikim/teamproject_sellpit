@@ -1,8 +1,10 @@
 package com.callor.school.controller;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,17 +13,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.callor.school.config.QualifierConfig;
+
 import com.callor.school.model.ExpVO;
 import com.callor.school.model.GuidVO;
 import com.callor.school.model.WorkOutDTO;
 import com.callor.school.service.ExpService;
 import com.callor.school.service.GuidService;
+
+import com.callor.school.model.WorkOutDTO;
+
 import com.callor.school.service.SelfitService;
 
 @RequestMapping(value="/user")
 @Controller
 public class SelfitController {
 	
+
 	@Autowired
 	private GuidService guidService;
 	@Autowired
@@ -55,12 +62,16 @@ public class SelfitController {
 							Model model) {
 		
 		WorkOutDTO health= selfitService.getDayHealth(sc_id, listid);
+
 		
 		 List<GuidVO> GVO = guidService.getGuid(listid);
 		 List<ExpVO> EXP = expService.getExp(listid);
 		model.addAttribute("HEALTH", health); 
 		model.addAttribute("GUID", GVO);
 		model.addAttribute("EXP", EXP); 
+
+		model.addAttribute("HEALTH", health); 
+
 		return "user/dayHealth";
 	}
 	
