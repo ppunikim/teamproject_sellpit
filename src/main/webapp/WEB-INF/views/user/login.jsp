@@ -107,9 +107,9 @@ text-align: center;
 			<button>로그인</button>
 		</fieldset>
 		<div class="ss">
-	<a href="${rootPath}/user/join">회원가입</a>
+	<a href="${rootPath}/user/join">회원가입하러가기</a>
 	
-				<a href="${rootPath}/user/logout">로그아웃</a>
+			
 				</div>
 	</form>
 	<div class="login_info">

@@ -1,10 +1,12 @@
 package com.callor.school.controller;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.callor.school.config.QualifierConfig;
 import com.callor.school.service.SelfitService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -15,7 +17,8 @@ import lombok.extern.slf4j.Slf4j;
 public class CalenderController {
 
 	private final SelfitService selfitService;
-	public CalenderController(SelfitService selfitService) {
+	public CalenderController(@Qualifier(QualifierConfig.SERVICE.SELFIT_V2)
+							  SelfitService selfitService) {
 		this.selfitService = selfitService;
 	}
 	
@@ -23,7 +26,7 @@ public class CalenderController {
 	public String home(Model model) {
 		
 		selfitService.startPage(model);
-		log.debug((String) model.getAttribute("MENUMAPS").toString());
+		log.debug((String) model.getAttribute("BEGIN_MENU").toString());
 		return "user/calender";
 	}
 	

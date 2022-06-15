@@ -49,6 +49,14 @@ img{
 	width: 300px;
 	margin: 0 auto;
 } 
+a:hover{
+color:white; 
+
+}
+.logout{
+margin-top: 20px
+}
+
 </style>
 
 <link rel="stylesheet" href="${rootPath}/static/css/login_ok.css?20220610_004" />
@@ -102,6 +110,8 @@ img{
 								<li><a href="${rootPath}/user/mypage">마이페이지</a></li>
 							</ul>
 						</nav>
+					<br>
+						<a class="logout" href="${rootPath}/user/logout">로그아웃</a>
 					</header>
 					<footer>
 						<p class="team">제작 : 나준희, 임효선, 김햇살</p>
