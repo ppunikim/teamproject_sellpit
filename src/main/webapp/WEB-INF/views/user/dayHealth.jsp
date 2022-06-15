@@ -14,6 +14,10 @@
 body {
 	background-image: url(${rootPath}/static/images/bg.jpg);
 }
+button:last-of-type {
+	width: 50px;
+	height: 20px;
+}
 </style>
 <script type="text/javascript">
 
@@ -24,7 +28,7 @@ body {
         }
 
         document.addEventListener("DOMContentLoaded",()=>{
-            const buttons = document.querySelectorAll("input.alerts")
+            const buttons = document.querySelectorAll("button.alerts")
             for(let i = 0 ; i < buttons.length ; i++) {
                 buttons[i].addEventListener("click",button_click)
             }
@@ -66,16 +70,24 @@ body {
 				<div>
 					<h4>** 세트가 끝날 때마다 체크를 눌러주세요. **</h4>
 				</div>
+
+
 				<c:forEach begin="1" end="${HEALTH.sl_set}" varStatus="INDEX">
 					<div class="healthpage list">
-
-						<span>${INDEX.count} set )</span> <input
-							placeholder="${HEALTH.sl_weight}"><label>kg</label> <input
-							placeholder="${HEALTH.sl_rep}"><label>회</label> <input
-							type="button" value="체크" class="alerts">
-
+						<span>${INDEX.count} set )</span>
+						<form action="${rootPath}/user/dayHealth" method="POST">
+						<input name="my_dayset" type="hidden" value="${INDEX.count}">
+						<input name="my_list" type="hidden" value="${HEALTH.list_name}">
+						<input name="sc_id" type="hidden" value="${HEALTH.sl_scid}">
+						<input name="sl_listid" type="hidden" value="${HEALTH.sl_listid}">
+						<input placeholder="${HEALTH.sl_weight}" name="my_weight"><label>kg</label>
+						<input placeholder="${HEALTH.sl_rep}" name="my_rep"><label>회</label>
+						<button class="alerts">체크</button>
+						</form> 
 					</div>
 				</c:forEach>
+
+
 			</div>
 		</section>
 	</div>

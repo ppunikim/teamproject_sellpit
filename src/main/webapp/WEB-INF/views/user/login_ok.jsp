@@ -85,12 +85,11 @@ margin-top: 20px
 		
 		<c:otherwise>
 			<c:if test="${not empty USER}">
-				<%-- <h3>로그인 성공!!!</h3>
+			<%-- <h3>로그인 성공!!!</h3>
 				<p><strong>USERNAME : </strong>${USER.username}</p>
 				<p><b>NAME : </b>${USER.name}</p>
 				<p><b>email : </b>${USER.email}</p>
 				<a href="${rootPath}/">홈으로</a> --%>
-				<div id="wrap">
 					<!-- Header -->
 					<header id="header">
 						<div class="logo">
