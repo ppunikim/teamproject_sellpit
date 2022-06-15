@@ -64,7 +64,11 @@ item: center;
 		</table>
 	</section>
 	<footer class="team">
+<<<<<<< HEAD
 		<a href="${rootPath}/user/calender">목록으로가기</a> 
+=======
+		<a href="${rootPath}/user/calender">이전</a> <a href="${rootPath}/user/dayHealth">다음</a>
+>>>>>>> 56f057f7ae93fa7ed2ddf45e143ab517f9ab764b
 	</footer>
 </body>
 </html>
