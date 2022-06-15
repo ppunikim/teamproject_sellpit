@@ -58,6 +58,11 @@ button:last-of-type {
 				${GG.gd_content}<br>
 				
 				</c:forEach>
+				<h4>호흡법</h4>
+				<c:forEach items="${BRE}" var="BB">
+				${BB.br_contenth}<br>
+				
+				</c:forEach>
 			</div>
 		</header>
 		<section>
