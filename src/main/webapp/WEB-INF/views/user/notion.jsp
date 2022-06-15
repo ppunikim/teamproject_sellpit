@@ -18,13 +18,12 @@ background-image: url(${rootPath}/static/images/bg.jpg);
 }
 h2 {
 	text-align: center;
-	margin-top: 30px;
-	margin-bottom: 30px;
-	border-radius: 10px;
+	margin-top: 80px;
 }
 fieldset {
-	margin-top: 80px;
+	margin-top: 30px;
 	border:3px solid  #545354;
+	border-radius: 20px;
 }
 form.bbs_write {
 	width: 80%;
@@ -37,18 +36,38 @@ form.bbs_write h2, form.bbs_write input, form.bbs_write textarea {
 	margin: 5px auto;
 	padding: 8px;
 }
+form button {
+	padding: 10px;
+    color: rgb(200, 199, 199);
+    background-color: rgb(45, 45, 45);
+    border-radius: 4px;
+}
+footer{
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 6px;
+    text-align: center;
+    width: 130px;
+    margin: 0 auto;
+}
+footer a {
+    text-decoration: none;
+    color: rgb(201 201 201); 
+}
 </style>
 </head>
 <body>
+<header>
+	<h2>sellfit 게시판</h2>
+</header>
 	<form method="POST" class="bbs_write">
 		<fieldset>
-		<h2>sellfit 게시판</h2>
 		<input name="no_date" type="date" value="${NOTION.no_date}">
 		<input name="no_time" type="time" value="${NOTION.no_time}">
-		<input name="no_writer" placeholder="작성자" value="${NOTION.no_write}">
-		<input name="no_subject" placeholder="제목">
-		<textarea rows="5" cols="20" name="no_content" placeholder="내용"></textarea>
-		<input type="file" name="file" accept="image/*">
+		<input name="no_writer" placeholder="작성자" value="${NOTION.no_writer}">
+		<input name="no_subject" placeholder="제목" value="${NOTION.no_subject}">
+		<textarea rows="5" cols="20" name="no_content" placeholder="내용" ></textarea>
+		<!-- <input type="file" name="file" accept="image/*"> -->
 		<button>저장</button>
 		</fieldset>
 	</form>

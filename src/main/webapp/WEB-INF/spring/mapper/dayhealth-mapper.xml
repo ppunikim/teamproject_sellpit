@@ -10,35 +10,32 @@
 
  	<select id="create_mypage_dayhealth">
  		CREATE TABLE tbl_dayhealth (
- 			my_seq			NUMBER			PRIMARY KEY,
- 			my_username		nVARCHAR2(50)	NOT NULL,
- 			my_date			VARCHAR2(15)	NOT NULL,
- 			my_dayset		nVARCHAR2(30)	NOT NULL,
-			my_weight		NUMBER			NOT NULL,
-			my_set			NUMBER			NOT NULL,
-			my_rep			NUMBER			NOT NULL,
+ 			my_seq          NUMBER          PRIMARY KEY,
+ 			my_username		nVARCHAR2(50),
+ 			my_date			VARCHAR2(15)	,
+			my_weight		VARCHAR2(15)	,
+			my_rep			VARCHAR2(15)	
  		)
  	</select>
 
-<!-- 	
-	<insert id="insert" parameterType="UserVO">
-		INSERT INTO tbl_user
+	
+	<insert id="insert" parameterType="DayHealthVO">
+		INSERT INTO tbl_dayhealth
 			(
-				username, 
-				password, 
-				name, 
-				email,
-				gender, 
-				role
+				my_seq,
+				my_username, 
+				my_date, 
+				my_weight, 
+				my_rep
 			) VALUES (
-				#{username}, 
-				#{password}, 
-				#{name}, 
-				#{email},
-				#{gender},
-				#{role}
+				#{my_seq},
+				#{my_username}, 
+				#{my_date}, 
+				#{my_weight},
+				#{my_rep}
 			)
 	</insert>
+	<!-- 
 	<update id="update" parameterType="UserVO">
 		UPDATE tbl_user SET
 				password = #{password}, 
@@ -51,7 +48,7 @@
 	<delete id="delete">
 		DELETE FROM tbl_user WHERE username = #{username}
 	</delete>
- -->
+  -->
  
  
  

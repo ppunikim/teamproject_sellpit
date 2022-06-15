@@ -60,39 +60,16 @@ body {
 				<th>횟수</th>
 			</tr>
 			<tr>
-				<td>랫 풀다운(등)</td>
-				<td>4set</td>
-				<td>18Kg</td>
-				<td>8~12회</td>
-			</tr>
-			<tr>
-				<td>인클라인 벤치 프레스(가슴)</td>
-				<td>4set</td>
-				<td>25kg</td>
-				<td>10~12회</td>
-			</tr>
-			<tr>
-				<td>브이스쿼트(하체)</td>
-				<td>4set</td>
-				<td>20kg</td>
-				<td>10회</td>
-			</tr>
-			<tr>
-				<td>트라이셉트 푸쉬다운(삼두)</td>
-				<td>4set</td>
-				<td>10kg</td>
-				<td>10회</td>
-			</tr>
-			<tr>
-				<td>바이셉 컬(이두)</td>
-				<td>4set</td>
-				<td>4kg</td>
-				<td>12회</td>
+			
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
 			</tr>
 		</table>
 	</section>
 	<footer class="team">
-		<a href="calender.html">이전</a> <a href="dayHealth.html">다음</a>
+		<a href="${rootPath}/user/calender">이전</a> <a href="${rootPath}/user/dayHealth">다음</a>
 	</footer>
 </body>
 </html>
