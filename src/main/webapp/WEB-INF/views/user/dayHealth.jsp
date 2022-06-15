@@ -39,10 +39,7 @@ body {
 		<header>
 			<section class="health">
 				<h2>${HEALTH.list_name}</h2>
-<<<<<<< HEAD
 
-=======
->>>>>>> 56f057f7ae93fa7ed2ddf45e143ab517f9ab764b
 			</section>
 			<input id="guide" type="checkbox" /> <label class="guidecheck"
 				for="guide"><div class="blankbutton">운동 가이드</div></label>
@@ -71,17 +68,12 @@ body {
 				</div>
 				<c:forEach begin="1" end="${HEALTH.sl_set}" varStatus="INDEX">
 					<div class="healthpage list">
-<<<<<<< HEAD
+
 						<span>${INDEX.count} set )</span> <input
 							placeholder="${HEALTH.sl_weight}"><label>kg</label> <input
 							placeholder="${HEALTH.sl_rep}"><label>회</label> <input
 							type="button" value="체크" class="alerts">
-=======
-						<span>${INDEX.count} set )</span>
-						<input placeholder="${HEALTH.sl_weight}"><label>kg</label>
-						<input placeholder="${HEALTH.sl_rep}"><label>회</label>
-						<input type="button" value="체크" class="alerts">
->>>>>>> 56f057f7ae93fa7ed2ddf45e143ab517f9ab764b
+
 					</div>
 				</c:forEach>
 			</div>
