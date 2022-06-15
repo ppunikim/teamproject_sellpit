@@ -7,6 +7,11 @@
 <html>
 <head>
 <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -19,6 +24,7 @@ form div {
 	border-radius: 10px;
 	font-weight: 550;
 }
+
 #mypage {
 	color: #636364;
 }
@@ -26,6 +32,7 @@ form div {
 
 </style>
 <link rel="stylesheet" href="${rootPath}/static/css/calender.css?20220614_002" />
+
 </head>
 
 
@@ -38,6 +45,7 @@ form div {
 				<div class="inner">
 					<h2>셀핏</h2>
 					<h3>Do it List</h3>
+
 					<br>
 					<br>
 				</div>
@@ -57,12 +65,15 @@ form div {
 
 				<ol class="b-list middle-box">
 					<c:forEach items="${MENUMAPS.MIDDLE}" var="MENU">
+
+						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일 ${MENU.sc_division}루틴 </a></li>
 						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일 ${MENU.sc_division}루틴 </a></li>
 					</c:forEach>
 				</ol>
 
 				<ol class="c-list adv-box">
 					<c:forEach items="${MENUMAPS.ADV}" var="MENU">
+
 						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일 ${MENU.sc_division}루틴 </a></li>
 					</c:forEach>
 				</ol>
@@ -74,6 +85,9 @@ form div {
 				먹는다고 다 살찌진 않는다.<br /> 많이 먹어서 살찔 뿐.
 			</p>
 		</section>
+
+		<p><a href="${rootPath}/user/mypage" id="mypage">mypage</a></p>
+
 		<p><a href="${rootPath}/user/mypage" id="mypage">mypage</a></p>
 		<footer>
 			<a href="${rootPath}">첫화면</a>
