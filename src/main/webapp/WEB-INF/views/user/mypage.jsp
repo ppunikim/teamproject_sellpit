@@ -7,19 +7,21 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>mypage</title>
 <style>
 a.last {
 	text-decoration: none;
 	color: rgb(200, 199, 199);
 }
+
 button:nth-of-type(2) {
 	margin: 0 10px;
 }
 </style>
-<link rel="stylesheet" href="${rootPath}/static/css/mypage.css?ver=2022-06-14-001" />
+<link rel="stylesheet"
+	href="${rootPath}/static/css/mypage.css?ver=2022-06-14-001" />
 </head>
 
 <body>
@@ -66,10 +68,9 @@ button:nth-of-type(2) {
 			</tr>
 		</table>
 		<section>
-			<p>
-				우리가 늙어서 <br />운동을 그만두는 것이 아니라,<br /> 우리가 운동을 <br />그만두기 때문에 늙는
-				것이다.
-			</p>
+			<div>
+				
+			</div>
 		</section>
 		<footer>
 			<button>

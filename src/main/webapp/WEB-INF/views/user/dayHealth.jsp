@@ -19,25 +19,10 @@ button:last-of-type {
 	height: 20px;
 }
 </style>
-<!-- <script type="text/javascript">
 
-        const button_click = (e) =>{
-            window.open("${rootPath}/user/timer", "타이머", "width=500px,height=550px")
-            e.target.style.backgroundColor = "rgb(56, 56, 164)"
-            console.log(e.target)
-        }
-
-        document.addEventListener("DOMContentLoaded",()=>{
-            const buttons = document.querySelectorAll("button.alerts")
-            for(let i = 0 ; i < buttons.length ; i++) {
-                buttons[i].addEventListener("click",button_click)
-            }
-        })
-		
-        
-</script> -->
 <script>
 	const rootPath = "${rootPath}"
+
 </script>
 <script src="${rootPath}/static/js/dayhealth.js?20220615_003"></script>
 </head>
@@ -48,6 +33,7 @@ button:last-of-type {
 		<header>
 			<section class="health">
 				<h2>${HEALTH.list_name}</h2>
+
 			</section>
 			<input id="guide" type="checkbox" /> <label class="guidecheck"
 				for="guide"><div class="blankbutton">운동 가이드</div></label>
@@ -74,6 +60,7 @@ button:last-of-type {
 				<div>
 					<h4>** 세트가 끝날 때마다 체크를 눌러주세요. **</h4>
 				</div>
+
 
 				<c:forEach begin="1" end="${HEALTH.sl_set}" varStatus="INDEX">
 					<div class="healthpage list">
