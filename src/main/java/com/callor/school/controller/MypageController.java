@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+
 import com.callor.school.config.DietConfig;
 import com.callor.school.model.MypageVO;
 import com.callor.school.pesistance.MypageDao;
@@ -28,6 +29,8 @@ public class MypageController {
 		MypageVO mypageVO = MypageVO.builder().my_date(dayFormat.format(date)).build();
 		model.addAttribute("MYPAGE",mypageDao);
 		
+
+
 		int length = DietConfig.MESSAGE.length;
 		
 		int rndNum = (int)(Math.random() * length);
@@ -35,6 +38,7 @@ public class MypageController {
 		
 		model.addAttribute("MESSAGE",msg);
 		
+
 		return null;
 	}
 

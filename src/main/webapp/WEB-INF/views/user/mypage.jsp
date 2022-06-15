@@ -20,6 +20,7 @@ button:nth-of-type(2) {
 	margin: 0 10px;
 }
 
+
 div {
 
 	margin-top: 20px;
@@ -74,6 +75,7 @@ div {
 			</tr>
 		</table>
 		<section>
+
 			<div>${MESSAGE}</div>
 		</section>
 		<footer>
