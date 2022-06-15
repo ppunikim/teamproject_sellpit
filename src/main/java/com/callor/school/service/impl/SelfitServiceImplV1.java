@@ -11,13 +11,14 @@ import org.springframework.ui.Model;
 
 import com.callor.school.config.QualifierConfig;
 import com.callor.school.model.StartMenuDTO;
+import com.callor.school.model.WorkOutDTO;
 import com.callor.school.pesistance.SelfitDao;
 import com.callor.school.service.SelfitService;
 
 @Service(QualifierConfig.SERVICE.SELFIT_V1)
 public class SelfitServiceImplV1 implements SelfitService{
 
-	public final SelfitDao selfitDao;
+	protected final SelfitDao selfitDao;
 	public SelfitServiceImplV1(SelfitDao selfitDao) {
 		this.selfitDao = selfitDao;
 	}//end 생성자
@@ -54,5 +55,17 @@ public class SelfitServiceImplV1 implements SelfitService{
 		List<StartMenuDTO> daySetList = selfitDao.selectDaySet(sc_num);
 		model.addAttribute("DAYS",daySetList);
 	}//endDaySetList()
+
+	@Override
+	public void getDaySetList(Model model, String sc_num, String sc_id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public WorkOutDTO getDayHealth(String sc_id, String listid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }//end class
