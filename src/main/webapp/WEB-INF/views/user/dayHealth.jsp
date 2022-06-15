@@ -19,6 +19,7 @@ button:last-of-type {
 	height: 20px;
 }
 </style>
+
 <script type="text/javascript">
 
         const button_click = (e) =>{
@@ -38,6 +39,7 @@ button:last-of-type {
 </head>
 <link rel="stylesheet"
 	href="${rootPath}/static/css/dayHealth.css?ver=2022-06-08-005">
+
 <body>
 	<div id="wrap">
 		<header>
@@ -80,14 +82,16 @@ button:last-of-type {
 				<c:forEach begin="1" end="${HEALTH.sl_set}" varStatus="INDEX">
 					<div class="healthpage list">
 						<span>${INDEX.count} set )</span>
-						<form action="${rootPath}/user/dayHealth" method="POST">
+
+						<form action="${rootPath}/user/dayHealth" method="POST" class="send">
 						<input name="my_dayset" type="hidden" value="${INDEX.count}">
 						<input name="my_list" type="hidden" value="${HEALTH.list_name}">
 						<input name="sc_id" type="hidden" value="${HEALTH.sl_scid}">
 						<input name="sl_listid" type="hidden" value="${HEALTH.sl_listid}">
-						<input placeholder="${HEALTH.sl_weight}" name="my_weight"><label>kg</label>
-						<input placeholder="${HEALTH.sl_rep}" name="my_rep"><label>회</label>
-						<button class="alerts">체크</button>
+
+						<input placeholder="${HEALTH.sl_weight}" name="my_weight" class="kg"><label>kg</label>
+						<input placeholder="${HEALTH.sl_rep}" name="my_rep" class="rep"><label>회</label>
+						<button type="button" class="alerts" >체크</button>
 						</form> 
 					</div>
 				</c:forEach>
