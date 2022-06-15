@@ -49,7 +49,10 @@ button:last-of-type {
 				for="guide"><div class="blankbutton">운동 가이드</div></label>
 			<div class="check1">
 				<h4>운동 설명</h4>
+				<c:forEach items="${EXP}" var="EE">
+				${EE.ex_content}<br>
 				
+				</c:forEach>
 				<h4>운동 가이드</h4>
 				<c:forEach items="${GUID}" var="GG">
 				${GG.gd_content}<br>

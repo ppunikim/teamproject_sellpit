@@ -9,9 +9,9 @@
 		
 		
 	</select>
-	<select id="getGuid" resultType="ExpVO">
-SELECT * FROM tbl_guid
-		where gd_listid = #{list_id}		
+	<select id="getExp" resultType="ExpVO">
+SELECT * FROM tbl_exp
+		where ex_listid = #{list_id}		
 		
 	</select>
 	
