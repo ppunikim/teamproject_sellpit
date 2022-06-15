@@ -59,13 +59,10 @@ public class DayHealthServiceImplV1 implements DayHealthService{
 	public int insert(DayHealthVO dayHealthVO, UserVO userVO) {
 		Date date = new Date(System.currentTimeMillis());
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		DayHealthVO dayhealthVO = DayHealthVO.builder()
-									.my_date(dateFormat.format(date))
-									.my_username(userVO.getName())
-									.my_weight(dayHealthVO.getMy_weight())
-									.my_rep(dayHealthVO.getMy_rep())
-									.build();
-		dayhealthDao.insert(dayhealthVO);
+		
+		dayHealthVO.setMy_date(dateFormat.format(date));
+		dayHealthVO.setMy_username(userVO.getUsername());
+		dayhealthDao.insert(dayHealthVO);
 		return 0;
 	}
 
