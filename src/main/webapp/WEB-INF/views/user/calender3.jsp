@@ -50,19 +50,19 @@ form div {
 				<label class="abc-list" for="c-box">상급</label>
 
 				<ol class="a-list begin-box">
-					<c:forEach items="${BEGIN_MENU}" var="MENU">
+					<c:forEach items="${MENUMAPS.BEGIN}" var="MENU">
 						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일 ${MENU.sc_division}루틴 </a></li>
 					</c:forEach>
 				</ol>
 
 				<ol class="b-list middle-box">
-					<c:forEach items="${MIDDLE_MENU}" var="MENU">
+					<c:forEach items="${MENUMAPS.MIDDLE}" var="MENU">
 						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일 ${MENU.sc_division}루틴 </a></li>
 					</c:forEach>
 				</ol>
 
 				<ol class="c-list adv-box">
-					<c:forEach items="${ADV_MENU}" var="MENU">
+					<c:forEach items="${MENUMAPS.ADV}" var="MENU">
 						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일 ${MENU.sc_division}루틴 </a></li>
 					</c:forEach>
 				</ol>
