@@ -7,13 +7,13 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<<<<<<< HEAD
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-=======
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
->>>>>>> 56f057f7ae93fa7ed2ddf45e143ab517f9ab764b
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>난이도 고르는 페이지</title>
 <style>
@@ -24,15 +24,7 @@ form div {
 	border-radius: 10px;
 	font-weight: 550;
 }
-<<<<<<< HEAD
 
-#mypage {
-	color: #636364;
-}
-</style>
-<link rel="stylesheet"
-	href="${rootPath}/static/css/calender.css?20220614_002" />
-=======
 #mypage {
 	color: #636364;
 }
@@ -40,7 +32,7 @@ form div {
 
 </style>
 <link rel="stylesheet" href="${rootPath}/static/css/calender.css?20220614_002" />
->>>>>>> 56f057f7ae93fa7ed2ddf45e143ab517f9ab764b
+
 </head>
 
 
@@ -53,21 +45,7 @@ form div {
 				<div class="inner">
 					<h2>셀핏</h2>
 					<h3>Do it List</h3>
-<<<<<<< HEAD
-					<br> <br>
-				</div>
 
-				<input id="a-box" type="radio" name="level" /> <label
-					class="abc-list" for="a-box">초급</label> <input id="b-box"
-					type="radio" name="level" /> <label class="abc-list" for="b-box">중급</label>
-				<input id="c-box" type="radio" name="level" /> <label
-					class="abc-list" for="c-box">상급</label>
-
-				<ol class="a-list begin-box">
-					<c:forEach items="${MENUMAPS.BEGIN}" var="MENU">
-						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일
-								${MENU.sc_division}루틴</a></li>
-=======
 					<br>
 					<br>
 				</div>
@@ -82,29 +60,21 @@ form div {
 				<ol class="a-list begin-box">
 					<c:forEach items="${MENUMAPS.BEGIN}" var="MENU">
 						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일 ${MENU.sc_division}루틴 </a></li>
->>>>>>> 56f057f7ae93fa7ed2ddf45e143ab517f9ab764b
 					</c:forEach>
 				</ol>
 
 				<ol class="b-list middle-box">
 					<c:forEach items="${MENUMAPS.MIDDLE}" var="MENU">
-<<<<<<< HEAD
-						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일
-								${MENU.sc_division}루틴 </a></li>
-=======
+
 						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일 ${MENU.sc_division}루틴 </a></li>
->>>>>>> 56f057f7ae93fa7ed2ddf45e143ab517f9ab764b
+						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일 ${MENU.sc_division}루틴 </a></li>
 					</c:forEach>
 				</ol>
 
 				<ol class="c-list adv-box">
 					<c:forEach items="${MENUMAPS.ADV}" var="MENU">
-<<<<<<< HEAD
-						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일
-								${MENU.sc_division}루틴 </a></li>
-=======
+
 						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일 ${MENU.sc_division}루틴 </a></li>
->>>>>>> 56f057f7ae93fa7ed2ddf45e143ab517f9ab764b
 					</c:forEach>
 				</ol>
 				<div id="height1"></div>
@@ -115,13 +85,10 @@ form div {
 				먹는다고 다 살찌진 않는다.<br /> 많이 먹어서 살찔 뿐.
 			</p>
 		</section>
-<<<<<<< HEAD
-		<p>
-			<a href="${rootPath}/user/mypage" id="mypage">mypage</a>
-		</p>
-=======
+
 		<p><a href="${rootPath}/user/mypage" id="mypage">mypage</a></p>
->>>>>>> 56f057f7ae93fa7ed2ddf45e143ab517f9ab764b
+
+		<p><a href="${rootPath}/user/mypage" id="mypage">mypage</a></p>
 		<footer>
 			<a href="${rootPath}">첫화면</a>
 		</footer>
