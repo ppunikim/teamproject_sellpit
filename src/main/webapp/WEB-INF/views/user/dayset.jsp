@@ -44,6 +44,7 @@ body {
 				<th>무게</th>
 				<th>횟수</th>
 			</tr>
+<<<<<<< HEAD
 			<c:forEach items="${WORKS}" var="WORK">
 				<tr data-list_id="${WORK.sl_listid}" data-sc_id ="${WORK.sl_scid}">
 					<td>${WORK.list_name}</td>
@@ -52,6 +53,15 @@ body {
 					<td>${WORK.sl_rep}</td>
 				</tr>
 			</c:forEach>
+=======
+			<tr>
+			
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			</tr>
+>>>>>>> 8a6a63bfd4290a424950362afc91f32d763a8f16
 		</table>
 	</section>
 	<footer class="team">

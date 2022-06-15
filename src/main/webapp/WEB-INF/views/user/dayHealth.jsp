@@ -14,6 +14,10 @@
 body {
 	background-image: url(${rootPath}/static/images/bg.jpg);
 }
+button {
+	width: 20px;
+	height: 20px;
+}
 </style>
 <script type="text/javascript">
 
@@ -24,7 +28,7 @@ body {
         }
 
         document.addEventListener("DOMContentLoaded",()=>{
-            const buttons = document.querySelectorAll("input.alerts")
+            const buttons = document.querySelectorAll("button.alerts")
             for(let i = 0 ; i < buttons.length ; i++) {
                 buttons[i].addEventListener("click",button_click)
             }
@@ -65,6 +69,7 @@ body {
 				<div>
 					<h4>** 세트가 끝날 때마다 체크를 눌러주세요. **</h4>
 				</div>
+<<<<<<< HEAD
 				<c:forEach begin="1" end="${HEALTH.sl_set}" varStatus="INDEX">
 					<div class="healthpage list">
 						<span>${INDEX.count} set )</span>
@@ -73,6 +78,42 @@ body {
 						<input type="button" value="체크" class="alerts">
 					</div>
 				</c:forEach>
+=======
+				<form method="POST">
+					<div class="healthpage">
+						<div> set )</div>
+						<input type="text" name="my_weight" placeholder="18" />
+						<div>kg</div>
+						<input type="text" name="my_rep" placeholder="10~12" />
+						<div>회</div>
+						<button type="submit" value="체크" class="alerts">체크</button>
+					</div>
+					<!-- <div class="healthpage">
+						<div>2 set )</div>
+						<input type="text" name="my_weight" placeholder="18" />
+						<div>kg</div>
+						<input type="text" name="my_rep" placeholder="10~12" />
+						<div>회</div>
+						<button type="submit" value="체크" class="alerts">체크</button>
+					</div>
+					<div class="healthpage">
+						<div>3 set )</div>
+						<input type="text" name="my_weight" placeholder="18" />
+						<div>kg</div>
+						<input type="text" name="my_rep" placeholder="10~12" />
+						<div>회</div>
+						<button type="submit" value="체크" class="alerts">체크</button>
+					</div>
+					<div class="healthpage">
+						<div>4 set )</div>
+						<input type="text" name="my_weight" placeholder="18" />
+						<div>kg</div>
+						<input type="text" name="my_rep" placeholder="10~12" />
+						<div>회</div>
+						<button type="submit" value="체크" class="alerts">체크</button>
+					</div> -->
+				</form>
+>>>>>>> 8a6a63bfd4290a424950362afc91f32d763a8f16
 			</div>
 		</section>
 	</div>
