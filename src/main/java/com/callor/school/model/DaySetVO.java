@@ -1,19 +1,6 @@
 package com.callor.school.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
-
-@Getter
-@Setter
-@ToString
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-public class DayHealthVO {
+public class DaySetVO {
 	
 
 	private String my_seq	;//		NUMBER			PRIMARY KEY,
