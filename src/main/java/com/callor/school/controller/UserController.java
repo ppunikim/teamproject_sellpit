@@ -1,7 +1,10 @@
 package com.callor.school.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,7 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.callor.school.config.DietConfig;
+import com.callor.school.model.DaySetVO;
 import com.callor.school.model.UserVO;
+import com.callor.school.pesistance.MypageDao;
+import com.callor.school.service.DaySetService;
 import com.callor.school.service.UserService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -19,7 +26,16 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping(value = "/user")
 public class UserController {
 
+	@Autowired
+	private MypageDao mypageDao;
+
+	// private DayHealthService hh;
+
+	@Autowired
+	private DaySetService daysetService;
+
 	private final UserService userService;
+
 	public UserController(UserService userService) {
 		this.userService = userService;
 	}
@@ -40,7 +56,7 @@ public class UserController {
 	 * 한다 8. 정상 사용자가 아니면 removeAttribute() method 를 사용하여 변수를 제거해 버린다
 	 */
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String login(UserVO userVO, HttpSession session,Model model) {
+	public String login(UserVO userVO, HttpSession session, Model model) {
 		// 로그인 폼에서 입력한 username, password 는 userVO에 담겨
 		// 이곳에 도착한다
 		log.debug(userVO.toString());
@@ -48,23 +64,22 @@ public class UserController {
 		// Server 와 view 사이에서 약속된 Protocol 을 사용하기 위하여
 		// 변수를 선언하고
 		String loginMessage = null;
-		
-		
+
 		// 로그인 폼에서 전송된 데이터중 username 으로
 		// findById() 즉 SelectOne(username) 을 실행한다
 		// 그리고 결과를 loginUserVO 에 담는다
 		// 만약 username 정보가 user table 에 없으면
-		// 결과는 null 이고, 
+		// 결과는 null 이고,
 		// 정보가 있으면 관련데이터가 포함된 vo 가 만들어진다
 		UserVO loginUserVO = userService.findById(userVO.getUsername());
-		
+		UserVO loginUser = (UserVO) session.getAttribute("USER");
 		// username 이 가입된 적이 없을때
-		if(loginUserVO == null) {
+		if (loginUserVO == null) {
 			// 가입된 적이 없다는 Key word 를 생성하고
 			loginMessage = "USERNAME FAIL";
 		} else // else if
 		// username 은 있는데 password 가 다를 경우
-		if( !loginUserVO.getPassword().equals(userVO.getPassword()) ) {
+		if (!loginUserVO.getPassword().equals(userVO.getPassword())) {
 			// 비밀번호가 잘못되었다는 Key word 를 생성하고
 			loginMessage = "PASSWORD FAIL";
 		}
@@ -75,11 +90,11 @@ public class UserController {
 		} else {
 			session.removeAttribute("USER");
 		}
-		
-		// view 로 보낼 message Protocol 을 setting 
-		model.addAttribute("LOGIN_MESSAGE",loginMessage);
+
+		// view 로 보낼 message Protocol 을 setting
+		model.addAttribute("LOGIN_MESSAGE", loginMessage);
+
 		return "user/login_ok";
-	
 	}
 
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
@@ -104,14 +119,14 @@ public class UserController {
 
 		return null;
 	}
-	
-	@RequestMapping(value="/join",method=RequestMethod.POST)
+
+	@RequestMapping(value = "/join", method = RequestMethod.POST)
 	public String join(UserVO userVO) {
-		
+
 		log.debug("JOIN");
 		log.debug(userVO.toString());
 		userService.join(userVO);
-		
+
 		/*
 		 * return "문자열" : Forwarding
 		 * => views/문자열.jsp 를 rendering 하라
@@ -124,7 +139,6 @@ public class UserController {
 		 */
 		return "redirect:/user/login";
 	}
-	
 
 	/*
 	 * username 중복검사를 하기 위하여 보통 다음같은 요청을 수행한다 /user/idcheck?username=callor
@@ -142,16 +156,16 @@ public class UserController {
 	@ResponseBody
 	@RequestMapping(value = "/idcheck/{username:.+}", method = RequestMethod.GET)
 	public String idcheck(@PathVariable String username) {
-		
+
 		UserVO userVO = userService.findById(username);
-		
+
 		// if(username.equalsIgnoreCase(userVO.getUsername()))
 		// if (userVO.getUsername().equalsIgnoreCase(username)) {
-		// 	return "FAIL";
+		// return "FAIL";
 		// } else {
-		// 	return "OK";
+		// return "OK";
 		// }
-		if(userVO == null) {
+		if (userVO == null) {
 			return "OK";
 		} else {
 			return "FAIL";
@@ -162,13 +176,38 @@ public class UserController {
 	public String test02() {
 		return null;
 	}
+
 	@RequestMapping(value = "/login_ok", method = RequestMethod.GET)
-	   public String test03() {
-	      return null;
-	   }
+	public String test03() {
+		return null;
+	}
 
 	@RequestMapping(value = "/timer", method = RequestMethod.GET)
 	public String timer() {
 		return null;
-	}		
+	}
+
+	@RequestMapping(value = "/mypage", method = RequestMethod.GET)
+	public String mypage(HttpSession session, Model model, String id) {
+
+     //	List<DaySetVO> loginUserVO = daysetService.findByUsername(id);
+     //	session.setAttribute("USERS", loginUserVO);
+
+		UserVO userVO = (UserVO) session.getAttribute("USER");
+		if (userVO == null) {
+			return "redirect:/user/login";
+		}
+		
+		List<DaySetVO> daysetvo = daysetService.findByUsername(userVO.getUsername());
+		log.debug(userVO.getUsername());
+		model.addAttribute("USERS" ,daysetvo);
+
+		// 다이어트 문구 입력하는 코드
+		int length = DietConfig.MESSAGE.length;
+		int rndNum = (int) (Math.random() * length);
+		String msg = DietConfig.MESSAGE[rndNum];
+		model.addAttribute("MESSAGE", msg);
+
+		return null;
+	}
 }

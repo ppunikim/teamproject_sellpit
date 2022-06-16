@@ -9,7 +9,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>mypage</title>
+<title>SELLFIT</title>
 <style>
 a.last {
 	text-decoration: none;
@@ -19,12 +19,36 @@ a.last {
 button:nth-of-type(2) {
 	margin: 0 10px;
 }
+button:hover{
+background-color: white;
+color: black;
+}
 
 div {
-
 	margin-top: 20px;
+	border: 1px solid black;
+	display: inline-block;
+	padding: 20px;
+	border-radius: 5px ;
 	
 }
+table {
+   border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    font-size: 90%;
+    text-align: center;
+    table-layout: fixed;
+   margin: 10px auto;
+   width: 70%;
+   
+}
+table th, td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(14, 13, 13, 0.2);
+}
+	
+
+
 </style>
 <link rel="stylesheet"
 	href="${rootPath}/static/css/mypage.css?ver=2022-06-14-001" />
@@ -35,43 +59,26 @@ div {
 		<header>
 			<h2>마이페이지</h2>
 		</header>
-		<form method="GET">
-			<div>
-				<input type="date" name="my_date" id="calenderdate" />
-			</div>
-			<input type="text" placeholder="day1 가슴 + 삼두" id="datedata" />
-		</form>
-		<table>
+		<table >
 			<tr>
+				<th>날짜</th>
 				<th>운동 종목</th>
 				<th>무게</th>
 				<th>set</th>
-				<th>rm</th>
 			</tr>
-			<tr>
-				<td>랫 풀다운</td>
-				<th>18kg</th>
-				<th>4</th>
-				<th>12</th>
-			</tr>
-			<tr>
-				<td>브이 스쿼트</td>
-				<th>18kg</th>
-				<th>4</th>
-				<th>10</th>
-			</tr>
-			<tr>
-				<td>트라이셉스 푸쉬다운</td>
-				<th>10kg</th>
-				<th>3</th>
-				<th>10</th>
-			</tr>
-			<tr>
-				<td>바이셉 컬</td>
-				<th>4kg</th>
-				<th>4</th>
-				<th>5</th>
-			</tr>
+
+				
+			<c:forEach items="${USERS}" var="USER">
+				<tr>
+					<th>${USER.my_date}</th>
+					<th>${USER.my_list}</th>
+					<th>${USER.my_weight}</th>
+					<th>${USER.my_rep}</th>
+				</tr>
+			</c:forEach>
+
+
+
 		</table>
 		<section>
 			<div>${MESSAGE}</div>

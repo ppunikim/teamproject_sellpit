@@ -66,4 +66,9 @@ public class DayHealthServiceImplV1 implements DayHealthService{
 		return 0;
 	}
 
+	@Override
+	public List<DayHealthVO> findByUsername(String username) {
+		return dayhealthDao.findByUsername(username);
+	}
+
 }

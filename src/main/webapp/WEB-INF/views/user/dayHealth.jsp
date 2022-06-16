@@ -9,11 +9,12 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>1.랫 풀다운</title>
+<title>SELLFIT</title>
 <style>
 body {
 	background-image: url(${rootPath}/static/images/bg.jpg);
 }
+
 button:last-of-type {
 	width: 50px;
 	height: 20px;
@@ -22,7 +23,6 @@ button:last-of-type {
 
 <script>
 	const rootPath = "${rootPath}"
-
 </script>
 <script src="${rootPath}/static/js/dayhealth.js?20220615_003"></script>
 </head>
@@ -65,15 +65,17 @@ button:last-of-type {
 				<c:forEach begin="1" end="${HEALTH.sl_set}" varStatus="INDEX">
 					<div class="healthpage list">
 						<span>${INDEX.count} set )</span>
-						<form action="${rootPath}/user/dayHealth" method="POST" class="send">
-						<input name="my_dayset" type="hidden" value="${INDEX.count}">
-						<input name="my_list" type="hidden" value="${HEALTH.list_name}">
-						<input name="sc_id" type="hidden" value="${HEALTH.sl_scid}">
-						<input name="sl_listid" type="hidden" value="${HEALTH.sl_listid}">
-						<input placeholder="${HEALTH.sl_weight}" name="my_weight" class="kg"><label>kg</label>
-						<input placeholder="${HEALTH.sl_rep}" name="my_rep" class="rep"><label>회</label>
-						<button type="button" class="alerts" >체크</button>
-						</form> 
+						<form action="${rootPath}/user/dayHealth" method="POST"
+							class="send">
+							<input name="my_dayset" type="hidden" value="${INDEX.count}">
+							<input name="my_list" type="hidden" value="${HEALTH.list_name}">
+							<input name="sc_id" type="hidden" value="${HEALTH.sl_scid}">
+							<input name="sl_listid" type="hidden" value="${HEALTH.sl_listid}">
+							<input placeholder="${HEALTH.sl_weight}" name="my_weight"
+								class="kg"><label>kg</label> <input
+								placeholder="${HEALTH.sl_rep}" name="my_rep" class="rep"><label>회</label>
+							<button type="button" class="alerts">체크</button>
+						</form>
 					</div>
 				</c:forEach>
 

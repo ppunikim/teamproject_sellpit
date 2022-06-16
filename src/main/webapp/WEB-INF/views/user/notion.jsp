@@ -11,7 +11,7 @@
 	content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
 <!-- ios에서 전화번호가 링크화되는 것 방지 -->
 <meta name="format-detection" content="telephone=no">
-<title>게시판</title>
+<title>SELLFIT</title>
 <style>
 body{
 background-image: url(${rootPath}/static/images/bg.jpg);
