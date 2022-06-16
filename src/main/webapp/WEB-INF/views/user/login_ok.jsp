@@ -9,7 +9,7 @@
 <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Insert title here</title>
+<title>SELLFIT</title>
 <style>
 
 
@@ -101,6 +101,10 @@ margin-top: 20px
 							<div class="inner">
 								<h2>${USER.username} 님</h2>
 							</div>
+							<div>
+							${MESSAGE}
+							</div>
+							
 						</div>
 						<div id="icon_solid1"></div>
 						<nav id="nav_margin">

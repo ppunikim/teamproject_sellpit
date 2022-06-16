@@ -26,8 +26,8 @@ public class DayHealthServiceImplV1 implements DayHealthService{
 
 	@Override
 	public List<DayHealthVO> selectAll() {
-		// TODO Auto-generated method stub
-		return null;
+		List<DayHealthVO> dayList = dayhealthDao.selectAll();
+		return dayList;
 	}
 
 	@Override
@@ -37,16 +37,25 @@ public class DayHealthServiceImplV1 implements DayHealthService{
 	}
 
 	@Override
+	public List<DayHealthVO> findByUsers(String username) {
+		List<DayHealthVO> dayList = dayhealthDao.findByUsers(username);
+		return dayList;
+	}
+
+	@Override
+	public List<DayHealthVO> findByUsersDate(String my_username, String my_date) {
+		List<DayHealthVO> dayList = dayhealthDao.findByUsersDate(my_username, my_date);
+		return dayList;
+	}
+
+
+	@Override
 	public int insert(DayHealthVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
-	public int update(DayHealthVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+
 
 	@Override
 	public int delete(String id) {
@@ -65,5 +74,21 @@ public class DayHealthServiceImplV1 implements DayHealthService{
 		dayhealthDao.insert(dayHealthVO);
 		return 0;
 	}
+	
+	@Transactional
+	@Override
+	public int update(DayHealthVO dayHealthVO) {
+		Date date = new Date(System.currentTimeMillis());
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		dayHealthVO.setMy_date(dateFormat.format(date));
+		dayhealthDao.insert(dayHealthVO);
+		return 0;
+	}
+
+	@Override
+	public List<DayHealthVO> findByUsername(String username) {
+		return dayhealthDao.findByUsername(username);
+	}
+
 
 }

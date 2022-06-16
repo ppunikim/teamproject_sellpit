@@ -33,11 +33,10 @@
 	content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
 <!-- ios에서 전화번호가 링크화되는 것 방지 -->
 <meta name="format-detection" content="telephone=no">
-<title>맨 처음 로그인 페이지</title>
+<title>SELLFIT</title>
 
 </head>
 <style>
-
 .inner p {
 	margin-top: 20px;
 	border-top: 1px solid #fff;
@@ -51,18 +50,19 @@
 	font-weight: 400;
 	cursor: pointer;
 }
-div #guest:hover{
-color: white;
+
+div #guest:hover {
+	color: white;
 }
 </style>
-<link rel="stylesheet" href="${rootPath}/static/css/main.css" />
+<link rel="stylesheet" href="${rootPath}/static/css/main.css?ver=1" />
 <body>
 	<div id="wrap">
 		<!-- Header -->
 		<header id="header">
 			<div class="logo">
-				<span class="icon"><img src="${rootPath}/static/images/do it list.png"
-					alt="" /></span>
+				<span class="icon"><img
+					src="${rootPath}/static/images/do it list.png" alt="" /></span>
 
 			</div>
 			<div id="icon_solid"></div>
@@ -70,10 +70,9 @@ color: white;
 				<div class="inner">
 					<h2>셀핏</h2>
 					<h2>Do it List</h2>
-					<p>
-						<br> 물만 먹어도 살 찌는 경우는<br> 가슴에 손을 얹고 곰곰히<br> 생각해보셔야
-						합니다<br> 내가 뭘 물처럼 먹었는가.
-					</p>
+					<div>
+						<p>${MESSAGE}</p>
+					</div>
 				</div>
 			</div>
 			<div id="icon_solid1"></div>

@@ -33,6 +33,14 @@
 			value="com.callor.school.model" />
 		<property name="mapperLocations"
 			value="/WEB-INF/spring/mapper/*-mapper.xml" />
+		<property name="configuration">
+			<bean class="org.apache.ibatis.session.Configuration">
+				<property name="jdbcTypeForNull" value="VARCHAR" />
+				<property name="cacheEnabled" value="true" />
+				<property name="defaultExecutorType" value="REUSE" />
+				<property name="mapUnderscoreToCamelCase" value="false" />
+			</bean>
+		</property>
 	</bean>
 
 	<!-- SqlSessionTemplate -->

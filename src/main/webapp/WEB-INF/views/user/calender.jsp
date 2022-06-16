@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>난이도 고르는 페이지</title>
+<title>SELLFIT</title>
 <style>
 form div {
 	border: 2px solid rgb(221, 222, 223);
@@ -57,7 +57,8 @@ form div {
 				<ol class="b-list middle-box">
 					<c:forEach items="${MIDDLE_MENU}" var="MENU">
 						<li><a href="${rootPath}/user/dayset/${MENU.sc_num}">일주일
-								${MENU.sc_division}루틴 </a></li>
+
+								${MENU.sc_division}루틴</a></li>
 					</c:forEach>
 				</ol>
 
@@ -71,9 +72,7 @@ form div {
 			</div>
 		</header>
 		<section>
-			<p>
-				먹는다고 다 살찌진 않는다.<br /> 많이 먹어서 살찔 뿐.
-			</p>
+			<p>${MESSAGE}</p>
 		</section>
 		<p>
 			<a href="${rootPath}/user/mypage" id="mypage">mypage</a>

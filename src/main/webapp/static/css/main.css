@@ -15,8 +15,7 @@ ol,
 ul {
     list-style: none;
 }
-
-body {
+ body {
     line-height: 1;
     color: black;
     font-family: "Source Sans Pro", sans-serif;
@@ -64,6 +63,7 @@ body {
 .inner p {
     border-bottom: 1px solid rgb(255, 255, 255, 0.5);
     color: white;
+    padding: 25px;
 }
 
 #header .logo {

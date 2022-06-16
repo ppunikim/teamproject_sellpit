@@ -2,8 +2,6 @@ package com.callor.school.pesistance;
 
 import java.util.List;
 
-import com.callor.school.model.UserVO;
-
 /*
  * Dao와 Service interface 에서 
  * 공통으로 구현할 interface를 만든다
