@@ -24,6 +24,7 @@ background-color: white;
 color: black;
 }
 
+
 div {
 	margin-top: 20px;
 	border: 1px solid black;
@@ -81,6 +82,7 @@ table th, td {
 
 		</table>
 		<section>
+
 			<div>${MESSAGE}</div>
 		</section>
 		<footer>
