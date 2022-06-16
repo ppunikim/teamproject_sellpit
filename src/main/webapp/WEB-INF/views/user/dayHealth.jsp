@@ -33,6 +33,7 @@ button:last-of-type {
 <link rel="stylesheet"
 	href="${rootPath}/static/css/dayHealth.css?ver=2022-06-16-026">
 
+
 <body>
 	
 		<header>
@@ -78,6 +79,7 @@ button:last-of-type {
 
 
 
+
 				<div class="healthpage list">
 					<span>${INDEX.count} set )</span>
 					<form action="${rootPath}/user/dayHealth" method="POST"
@@ -92,6 +94,7 @@ button:last-of-type {
 						<button type="button" class="alerts">체크</button>
 					</form>
 				</div>
+
 			</div>
 		</section>
 		<footer>

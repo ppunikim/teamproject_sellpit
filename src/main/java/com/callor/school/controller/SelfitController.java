@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.callor.school.config.QualifierConfig;
 import com.callor.school.model.BreathVO;
+
 import com.callor.school.model.DayHealthVO;
 import com.callor.school.model.ExpVO;
 import com.callor.school.model.GuidVO;
@@ -82,6 +84,7 @@ public class SelfitController {
 		 List<GuidVO> GVO = guidService.getGuid(listid);
 		 List<ExpVO> EXP = expService.getExp(listid);
 		 List<BreathVO> BRE = breathService.getBreath(listid);
+
 		 List<DayHealthVO> dayList = dayhealthService.findByUsersDate(userVO.getUsername(),dayFormat.format(date));
 		 log.debug("========================");
 		 log.debug(dayList.toString());
