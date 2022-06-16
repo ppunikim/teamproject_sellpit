@@ -4,7 +4,6 @@ package com.callor.school.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,20 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.callor.school.config.QualifierConfig;
-<<<<<<< HEAD
 import com.callor.school.model.BreathVO;
-=======
-
->>>>>>> master
 import com.callor.school.model.ExpVO;
 import com.callor.school.model.GuidVO;
 import com.callor.school.model.WorkOutDTO;
 import com.callor.school.service.BreathService;
 import com.callor.school.service.ExpService;
 import com.callor.school.service.GuidService;
-
-import com.callor.school.model.WorkOutDTO;
-
 import com.callor.school.service.SelfitService;
 
 @RequestMapping(value="/user")
@@ -77,13 +69,10 @@ public class SelfitController {
 		model.addAttribute("HEALTH", health); 
 		model.addAttribute("GUID", GVO);
 		model.addAttribute("EXP", EXP); 
-<<<<<<< HEAD
 		model.addAttribute("BRE", BRE); 
-=======
 
 		model.addAttribute("HEALTH", health); 
 
->>>>>>> master
 		return "user/dayHealth";
 	}
 	
