@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.callor.school.config.DietConfig;
 import com.callor.school.config.QualifierConfig;
 import com.callor.school.service.SelfitService;
 
@@ -13,22 +14,30 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Controller
-@RequestMapping(value="/user")
+@RequestMapping(value = "/user")
 public class CalenderController {
 
 	private final SelfitService selfitService;
-	public CalenderController(@Qualifier(QualifierConfig.SERVICE.SELFIT_V2)
-							  SelfitService selfitService) {
+
+	public CalenderController(@Qualifier(QualifierConfig.SERVICE.SELFIT_V2) SelfitService selfitService) {
 		this.selfitService = selfitService;
 	}
-	
+
 	@RequestMapping(value = "/calender", method = RequestMethod.GET)
 	public String home(Model model) {
-		
+
 		selfitService.startPage(model);
 		log.debug((String) model.getAttribute("BEGIN_MENU").toString());
+
+		int length = DietConfig.MESSAGE.length;
+
+		int rndNum = (int)(Math.random() * length);
+
+		String msg = DietConfig.MESSAGE[rndNum];
+
+		model.addAttribute("MESSAGE", msg);
+
 		return "user/calender";
 	}
-	
-	
+
 }

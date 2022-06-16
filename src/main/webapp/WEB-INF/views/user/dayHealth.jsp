@@ -9,13 +9,19 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>1.랫 풀다운</title>
+<title>SELLFIT</title>
 <style>
 body {
 	background-image: url(${rootPath}/static/images/bg.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
+
+button:last-of-type {
+	width: 50px;
+	height: 20px;
+}
+</style>
 
 </style>
 <script>
@@ -69,6 +75,7 @@ body {
 				<div>
 					<h4>** 세트가 끝날 때마다 체크를 눌러주세요. **</h4>
 				</div>
+
 
 
 				<div class="healthpage list">

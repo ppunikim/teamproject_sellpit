@@ -33,7 +33,7 @@
 	content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
 <!-- ios에서 전화번호가 링크화되는 것 방지 -->
 <meta name="format-detection" content="telephone=no">
-<title>맨 처음 로그인 페이지</title>
+<title>SELLFIT</title>
 
 </head>
 <style>

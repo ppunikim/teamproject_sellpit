@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Dagym</title>
+<title>SELLFIT</title>
 <style>
 form div {
 	border: 2px solid rgb(221, 222, 223);
@@ -71,7 +71,7 @@ form div {
 		</header>
 		<section>
 			<p>
-				먹는다고 다 살찌진 않는다.<br /> 많이 먹어서 살찔 뿐.
+				{MESSAGE}
 			</p>
 		</section>
 		<p><a href="${rootPath}/user/mypage" id="mypage">mypage</a></p>

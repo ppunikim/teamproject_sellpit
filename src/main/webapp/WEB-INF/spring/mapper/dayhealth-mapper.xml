@@ -7,6 +7,9 @@
 	<select id="selectAll" resultType="DayHealthVO">
 		SELECT * FROM tbl_dayhealth
 	</select>
+	<select id="findByUsername" resultType="DayHealthVO">
+		SELECT * FROM tbl_dayhealth where my_username = #{my_username}
+	</select>
 
  	<select id="create_mypage_dayhealth">
  		CREATE TABLE tbl_dayhealth (

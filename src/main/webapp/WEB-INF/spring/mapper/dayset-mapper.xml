@@ -5,57 +5,53 @@
 
 <mapper namespace="com.callor.school.pesistance.DaySetDao">
 	<select id="selectAll" resultType="DaySetVO">
-		SELECT * FROM tbl_dayset
+		SELECT * FROM tbl_dayhealth
 	</select>
 
-	<!-- <select id="create_dayset_table">
-		CREATE TABLE tbl_dayset (
-			ds_seq 		NUMBER 			PRIMARY KEY,
-			ds_username 	VARCHAR2(10) 	NOT NULL,
-			ds_date 		VARCHAR2(15)	NOT NULL,
-			ds_daysetid 	nVARCHAR2(90) 	NOT NULL,
-			ds_dayhealthid nVARCHAR2(90) NOT NULL,
-			ds_kind nVARCHAR2(90) NOT NULL,
-			ds_set nVARCHAR2(90) NOT NULL,
-			ds_weight nVARCHAR2(90) NOT NULL,
-			ds_rep nVARCHAR2(90) NOT NULL,
-			
-		)
-	</select> -->
 
 	<select id="findById" resultType="DaySetVO">
-		SELECT * FROM tbl_dayset WHERE
-		daysh_seq = #{daysh_seq}
+		SELECT * FROM
+		tbl_dayhealth
+		where my_username = #{my_username}
+	</select>
+	<select id="findByUsername" resultType="DaySetVO">
+		SELECT * FROM
+		tbl_dayhealth
+		where my_username = #{my_username}
 	</select>
 
+	<select id="create_mypage_dayhealth">
+		CREATE TABLE tbl_dayhealth (
+		my_seq NUMBER PRIMARY
+		KEY,
+		my_username nVARCHAR2(50) NOT NULL,
+		my_list nVARCHAR2(50) NOT NULL,
+		my_date VARCHAR2(15) NOT NULL,
+		my_weight VARCHAR2(15) NOT NULL,
+		my_rep
+		VARCHAR2(15) NOT NULL
+		)
+	</select>
+
+
 	<insert id="insert" parameterType="DaySetVO">
-		INSERT INTO tbl_dayset
+		INSERT INTO tbl_dayhealth
 		(
-		daysh_seq,
-		daysh_username,
-		daysh_date,
-		daysh_daysetid,
-		daysh_dayhealthid
+		my_seq,
+		my_username,
+		my_list,
+		my_date,
+		my_weight,
+		my_rep
 		) VALUES (
-		#{daysh_seq},
-		#{daysh_username},
-		#{daysh_date},
-		#{daysh_daysetid},
-		#{daysh_dayhealthid}
+		seq_dayhealth.nextval,
+		#{my_username},
+		#{my_list},
+		#{my_date},
+		#{my_weight},
+		#{my_rep}
 		)
 	</insert>
-	<update id="update" parameterType="DaySetVO">
-		UPDATE tbl_dayset SET
-		password = #{password},
-		name = #{name},
-		email = #{email},
-		gender = #{gender},
-		role = #{role}
-		WHERE username = #{username}
-	</update>
-	<delete id="delete">
-		DELETE FROM tbl_dayset WHERE username = #{username}
-	</delete> 
 </mapper>
 
 

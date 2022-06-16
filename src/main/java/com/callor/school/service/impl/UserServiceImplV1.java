@@ -60,6 +60,8 @@ public class UserServiceImplV1 implements UserService {
 		userDao.insert(userVO);
 		return null;
 	}
+	
+	//
 
 	@Override
 	public List<UserVO> selectAll() {
@@ -87,6 +89,11 @@ public class UserServiceImplV1 implements UserService {
 	public int delete(String id) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public List<UserVO> findByUserName(String username) {
+		return userDao.findByUserName(username);
 	}
 
 }

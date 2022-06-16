@@ -83,6 +83,8 @@ textarea {
     text-decoration: none;
     border-bottom: none;
     position: relative;
+    display: inline-block;
+    float: inherit;
 
 }
 
