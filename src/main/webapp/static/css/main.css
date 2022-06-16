@@ -15,8 +15,7 @@ ol,
 ul {
     list-style: none;
 }
-
-body {
+ body {
     line-height: 1;
     color: black;
     font-family: "Source Sans Pro", sans-serif;
