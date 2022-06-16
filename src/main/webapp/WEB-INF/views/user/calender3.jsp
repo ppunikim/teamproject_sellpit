@@ -90,7 +90,7 @@ form div {
 
 		<p><a href="${rootPath}/user/mypage" id="mypage">mypage</a></p>
 		<footer>
-			<a href="${rootPath}">첫화면</a>
+			<a href="${rootPath}/user">첫화면</a>
 		</footer>
 	</div>
 </body>
