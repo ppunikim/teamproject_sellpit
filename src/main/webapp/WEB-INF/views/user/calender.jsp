@@ -23,6 +23,10 @@ form div {
 #mypage {
 	color: #636364;
 }
+#before {
+	background-color: transparent;
+	color: #eee;
+}
 </style>
 <link rel="stylesheet"
 	href="${rootPath}/static/css/calender.css?20220614_002" />
@@ -79,7 +83,7 @@ form div {
 		</p>
 		<footer>
 			<div>
-				<button onclick="history.back()">이전화면</button>
+				<button onclick="history.back()" id="before">이전화면</button>
 			</div>
 		</footer>
 	</div>
