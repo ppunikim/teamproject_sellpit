@@ -21,8 +21,17 @@ button:last-of-type {
 	width: 50px;
 	height: 20px;
 }
-</style>
+#go {
+	font-size: 15px;
+	color: black;
+}
+#go:hover{
+color:#eee;
+}
+#daysetList {
+	margin-top: 30px;
 
+}
 </style>
 <script>
 	const rootPath = "${rootPath}"
@@ -116,7 +125,7 @@ button:last-of-type {
 			</table>
 		</footer>
 			<div id="daysetList">
-				<a href="${rootPath}/user/dayset/${HEALTH.sc_num}">운동 목록으로</a>
+				<a href="${rootPath}/user/dayset/${HEALTH.sc_num}" id="go">운동 목록으로</a>
 			</div>
 	</div>
 </body>
