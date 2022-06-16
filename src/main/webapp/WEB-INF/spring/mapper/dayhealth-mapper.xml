@@ -11,14 +11,24 @@
  	<select id="create_mypage_dayhealth">
  		CREATE TABLE tbl_dayhealth (
  			my_seq          NUMBER          PRIMARY KEY,
- 			my_username		nVARCHAR2(50)   NOT NULL,
- 			my_list         nVARCHAR2(50)   NOT NULL,
+ 			my_username		nVARCHAR2(50)   ,
+ 			my_list         nVARCHAR2(50)   ,
  			my_date			VARCHAR2(15)	NOT NULL,
 			my_weight		VARCHAR2(15)	NOT NULL,
 			my_rep			VARCHAR2(15)	NOT NULL
  		)
  	</select>
 
+	<select id="findById" resultType="DayHealthVO">
+		SELECT * FROM tbl_dayhealth
+		WHERE my_username = #{my_username}
+	</select>
+
+	<select id="findByUsersDate" resultType="DayHealthVO">
+		SELECT * FROM tbl_dayhealth
+		WHERE my_username = #{my_username} AND my_date = #{my_date}
+	</select>
+	
 	
 	<insert id="insert" parameterType="DayHealthVO">
 		INSERT INTO tbl_dayhealth
@@ -38,16 +48,29 @@
 				#{my_rep}
 			)
 	</insert>
-	<!-- 
-	<update id="update" parameterType="UserVO">
-		UPDATE tbl_user SET
-				password = #{password}, 
-				name = #{name},
-				email = #{email},
-				gender = #{gender},
-				role = #{role}
-		WHERE username = #{username} 
+	
+	
+	<update id="update" parameterType="DayHealthVO">
+		INSERT INTO tbl_dayhealth
+			(
+				my_seq,
+				my_username, 
+				my_list,
+				my_date, 
+				my_weight, 
+				my_rep
+			) VALUES (
+				seq_dayhealth.nextval,
+				#{my_username},
+				#{my_list},  
+				#{my_date}, 
+				#{my_weight},
+				#{my_rep}
+			)
 	</update>
+	
+	
+	<!-- 
 	<delete id="delete">
 		DELETE FROM tbl_user WHERE username = #{username}
 	</delete>
