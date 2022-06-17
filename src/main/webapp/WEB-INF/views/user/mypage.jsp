@@ -31,7 +31,6 @@ button:hover {
 }
 
 div {
-	margin-top: 20px;
 	display: inline-block;
 	padding: 20px;
 	border-radius: 5px;
@@ -101,14 +100,12 @@ table th, td {
 		</section>
 		<footer>
 			<button>
-				<a href="${rootPath}/user/calender" class="last">이전 화면</a>
+				<a href="${rootPath}/user/calender" class="last">난이도</a>
 			</button>
 			<button>
 				<a href="${rootPath}/user/notion" class="notion  last">게시판</a>
 			</button>
-			<button>
-				<a href="${rootPath}" class="last">첫 화면</a>
-			</button>
+			<button onclick="history.back()" class="last">이전화면</button>
 		</footer>
 	</div>
 </body>

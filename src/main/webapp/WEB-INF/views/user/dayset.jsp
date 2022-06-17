@@ -25,7 +25,8 @@ td {
 }
 
 footer {
-	item: center;
+	display: flex;
+	justify-content: space-around;
 }
 
 #play {
@@ -85,7 +86,8 @@ footer {
 		</table>
 	</section>
 	<footer class="team">
-		<a href="${rootPath}/user/calender">목록으로가기</a>
+		<a href="${rootPath}/user/calender">난이도 고르기</a>
+		<a href="${rootPath}/user/mypage">마이 페이지</a>
 	</footer>
 </body>
 </html>
