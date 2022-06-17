@@ -30,8 +30,8 @@ color:#eee;
 }
 #daysetList {
 	margin-top: 30px;
-
 }
+
 </style>
 <script>
 	const rootPath = "${rootPath}"

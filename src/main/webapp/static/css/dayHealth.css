@@ -215,10 +215,6 @@ span, input.kg, input.rep {
 	margin-right: 4px;
 	
 }
-footer {
-	overflow: scroll;
-	height: 350px;
-}
 table {
 	border-collapse: collapse;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
