@@ -19,13 +19,11 @@ form div {
 	border-radius: 10px;
 	font-weight: 550;
 }
-
-#mypage {
-	color: #636364;
-}
 #before {
 	background-color: transparent;
 	color: #eee;
+	border-radius: 10px;
+	padding: 3px;
 }
 </style>
 <link rel="stylesheet"
@@ -78,12 +76,9 @@ form div {
 		<section>
 			<p>${MESSAGE}</p>
 		</section>
-		<p>
-			<a href="${rootPath}/user/mypage" id="mypage">mypage</a>
-		</p>
 		<footer>
 			<div>
-				<button onclick="history.back()" id="before">이전화면</button>
+				<button onclick="history.back()" id="before">처음 화면</button>
 			</div>
 		</footer>
 	</div>
