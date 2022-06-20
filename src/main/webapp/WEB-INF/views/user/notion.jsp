@@ -72,7 +72,7 @@ footer a {
 		</fieldset>
 	</form>
 	<footer>
-		<a href="${rootPath}/user/mypage">마이페이지</a>
+		<a href="${rootPath}/user/notionList">목록으로</a>
 	</footer>
 </body>
 </html>
