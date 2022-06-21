@@ -5,14 +5,15 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.callor.school.model.NotionVO;
+import com.callor.school.pesistance.NotionDao;
 import com.callor.school.service.NotionService;
 
 @Service
 public class NotionServiceImplV1 implements NotionService{
 
-	private final NotionService notionService;
-	public NotionServiceImplV1(NotionService notionService) {
-		this.notionService = notionService;
+	private final NotionDao notionDao;
+	public NotionServiceImplV1(NotionDao notionDao) {
+		this.notionDao = notionDao;
 	}
 	
 	@Override
@@ -23,7 +24,7 @@ public class NotionServiceImplV1 implements NotionService{
 
 	@Override
 	public List<NotionVO> selectAll() {
-		List<NotionVO> noList = notionService.selectAll();
+		List<NotionVO> noList = notionDao.selectAll();
 		return noList;
 	}
 
