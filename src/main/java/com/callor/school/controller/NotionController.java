@@ -4,14 +4,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.callor.school.model.NotionVO;
-import com.callor.school.pesistance.NotionDao;
 import com.callor.school.service.NotionService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -21,9 +19,12 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping(value="/user")
 public class NotionController {
 	
-	@Autowired
-	private NotionDao notionDao;
-	private NotionService notionService;
+
+
+	private final NotionService notionService;
+	public NotionController(NotionService notionService) {
+		this.notionService = notionService;
+	}
 	
 	@RequestMapping(value="/notion", method=RequestMethod.GET)
 	public String write(Model model) {
@@ -40,22 +41,18 @@ public class NotionController {
 		return "user/notion";
 	}
 	
-	
 	  @RequestMapping(value="/notion", method=RequestMethod.POST) 
 	  public String write(NotionVO notionVO) { 
-		  log.debug("=".repeat(100));
-		  log.debug("INSERT 전 {}", notionVO.getNo_seq()); 
-		  notionDao.insert(notionVO);
-		  log.debug("INSERT 후 {}", notionVO.getNo_seq()); 
-		  return "redirect:/user/notion"; 
+		  int ret = notionService.insert(notionVO);
+		  return "redirect:/user/notionList"; 
 	  }
 	 
 		@RequestMapping(value="/notionList", method = RequestMethod.GET)
 		public String List(Model model) {
-			
+			log.debug("여기ㅏ"+ notionService.selectAll());
 			List<NotionVO> notionList = notionService.selectAll();
 			model.addAttribute("NOTIONLIST", notionList);
-			return "user/notionList";
+			return null;
 		}
 //		@RequestMapping(value="/notionList", method = RequestMethod.POST)
 //		public String List(NotionVO notionVO) {

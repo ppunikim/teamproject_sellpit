@@ -76,7 +76,17 @@ public class SelfitController {
 							@PathVariable("list_id") String listid,
 							@PathVariable("sc_id") String sc_id,
 							Model model) {
-		UserVO userVO = (UserVO) session.getAttribute("USER");
+		
+		UserVO userVO = null;
+		if ((UserVO) session.getAttribute("USER") == null) {
+			 userVO = (UserVO) session.getAttribute("GUEST");
+			
+		}else {
+			 userVO = (UserVO) session.getAttribute("USER");
+			
+		}
+		
+		
 		WorkOutDTO health= selfitService.getDayHealth(sc_id, listid);
 		Date date = new Date(System.currentTimeMillis());
 		SimpleDateFormat dayFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -94,6 +104,7 @@ public class SelfitController {
 		 model.addAttribute("GUID", GVO);
 		 model.addAttribute("EXP", EXP); 
 		 model.addAttribute("BRE", BRE); 
+		 model.addAttribute("USER2", userVO); 
 
 		model.addAttribute("HEALTH", health); 
 		

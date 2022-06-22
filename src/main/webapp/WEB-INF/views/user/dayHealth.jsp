@@ -21,21 +21,25 @@ button:last-of-type {
 	width: 50px;
 	height: 20px;
 }
+
 #go {
 	font-size: 15px;
 	color: black;
 }
-#go:hover{
-color:#eee;
+
+#go:hover {
+	color: #eee;
 }
+
 #daysetList {
 	margin-top: 30px;
 }
+
 footer {
-	margin: 10px auto; 
+	margin: 10px auto;
 	overflow-y: scroll;
 	height: 300px;
-	width: 580px; 
+	width: 580px;
 }
 </style>
 <script>
@@ -49,37 +53,37 @@ footer {
 
 
 <body>
-	
-		<header>
-			<section class="health">
-				<h2>${HEALTH.list_name}</h2>
 
-			</section>
-			<input id="guide" type="checkbox" /> <label class="guidecheck"
-				for="guide"><div class="blankbutton">운동 가이드</div></label>
-			<div class="check1">
-				<br>
-				<h4>운동 설명</h4>
-				<br>
-				<c:forEach items="${EXP}" var="EE">
+	<header>
+		<section class="health">
+			<h2>${HEALTH.list_name}</h2>
+
+		</section>
+		<input id="guide" type="checkbox" /> <label class="guidecheck"
+			for="guide"><div class="blankbutton">운동 가이드</div></label>
+		<div class="check1">
+			<br>
+			<h4>운동 설명</h4>
+			<br>
+			<c:forEach items="${EXP}" var="EE">
 				${EE.ex_content}<br>
-				</c:forEach>
-				<br>
-				<h4>운동 가이드</h4>
-				<br>
-				<c:forEach items="${GUID}" var="GG">
+			</c:forEach>
+			<br>
+			<h4>운동 가이드</h4>
+			<br>
+			<c:forEach items="${GUID}" var="GG">
 				${GG.gd_content}<br>
-				</c:forEach>
-				<br>
-				<h4>호흡법</h4>
-				<br>
-				<c:forEach items="${BRE}" var="BB">
+			</c:forEach>
+			<br>
+			<h4>호흡법</h4>
+			<br>
+			<c:forEach items="${BRE}" var="BB">
 				${BB.br_contenth}<br>
-				</c:forEach>
-				<br>
-			</div>
-		</header>
-		<div id="wrap">
+			</c:forEach>
+			<br>
+		</div>
+	</header>
+	<div id="wrap">
 		<section>
 			<div>
 				<img src="${rootPath}/static/images/${HEALTH.sl_listid}.jpg">
@@ -105,7 +109,15 @@ footer {
 						<input placeholder="${HEALTH.sl_weight}" name="my_weight"
 							class="kg"><label>kg</label> <input
 							placeholder="${HEALTH.sl_rep}" name="my_rep" class="rep"><label>회</label>
-						<button type="button" class="alerts">체크</button>
+						<input hidden="hidden" value="${USER2.username}" class="guestbox" data-seq="${USER2.username}"/>
+						<c:choose>
+							<c:when test="${USER2.username eq '게스트'}">
+								<button type="button" class="alerts alerts2">체험하기</button>
+							</c:when>
+							<c:otherwise>
+								<button type="button" class="alerts">체크</button>
+							</c:otherwise>
+						</c:choose>
 					</form>
 				</div>
 
@@ -120,18 +132,19 @@ footer {
 					<th>횟수</th>
 				</tr>
 				<c:forEach items="${LIST_NAME}" var="l_name" varStatus="INDEX">
-				<tr>
-					<td>${INDEX.count}</td>
-					<td>${l_name.my_list}</td>
-					<td>${l_name.my_weight}</td>
-					<td>${l_name.my_rep}</td>
-				</tr>
-			</c:forEach>
+					<tr>
+						<td>${INDEX.count}</td>
+						<td>${l_name.my_list}</td>
+						<td>${l_name.my_weight}</td>
+						<td>${l_name.my_rep}</td>
+					</tr>
+				</c:forEach>
 			</table>
 		</footer>
-			<div id="daysetList">
-				<a href="${rootPath}/user/dayset/${HEALTH.sc_num}" id="go">운동 목록으로</a>
-			</div>
+		<div id="daysetList">
+			<a href="${rootPath}/user/dayset/${HEALTH.sc_num}" id="go">운동
+				목록으로</a>
+		</div>
 	</div>
 </body>
 

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const kg = document.querySelector(".kg");
   const rep = document.querySelector(".rep");
+  const user = document.querySelector(".guestbox");
 
   const button_click = (e) => {
     if (kg.value === "") {
@@ -14,10 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     window.open(`${rootPath}/user/timer`, "타이머", "width=500px,height=550px");
-    e.target.style.backgroundColor = "rgb(56, 56, 164)";
     console.log(e.target);
 
-    document.querySelector("form.send")?.submit();
+    const user2 = user.dataset.seq;
+    if (!(user2 === "게스트")) {
+      document.querySelector("form.send")?.submit();
+      e.target.style.backgroundColor = "rgb(56, 56, 164)";
+    }
   };
 
   const buttons = document.querySelectorAll("button.alerts");

@@ -36,8 +36,7 @@ public class NotionServiceImplV1 implements NotionService{
 
 	@Override
 	public int insert(NotionVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		return notionDao.insert(vo);
 	}
 
 	@Override
